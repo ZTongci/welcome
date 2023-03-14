@@ -116,7 +116,7 @@ footer{
   right: 0;
 }
 
-#hero .hero-container {
+.hero-container {
   position: absolute;
   bottom: 0;
   top: 0;
@@ -129,14 +129,14 @@ footer{
   padding: 0 15px;
 }
 
-#hero h1 {
+.hero-mainTitle {
   margin: 0 0 10px 0;
   font-size: 80px;
   font-family: "Satisfy", serif;
   color: white;
 }
 
-#hero h2 {
+.hero-subTitle {
   color: white;
   margin-bottom: 50px;
   font-size: 10px;
@@ -145,19 +145,7 @@ footer{
   text-transform: uppercase;
 }
 
-#hero .btn-scroll {
-  transition: 0.4s;
-  color: rgba(255, 255, 255, 0.6);
-  animation: up-down 1s ease-in-out infinite alternate-reverse both;
-}
 
-#hero .btn-scroll i {
-  font-size: 48px;
-}
-
-#hero .btn-scroll:hover {
-  color: #ffb727;
-}
 
 @media (min-width: 1024px) {
   #hero {
@@ -166,11 +154,11 @@ footer{
 }
 
 @media (max-width: 575px) {
-  #hero h1 {
+  .hero-mainTitle {
     font-size: 40px;
   }
 
-  #hero h2 {
+  .hero-subTitle {
     text-align: center;
     margin-bottom: 30px;
   }
@@ -303,7 +291,7 @@ footer{
   margin: 0 0 6px 0;
   display: block;
   font-weight: 700;
-  background: #ffb727;
+  background-color: #ffb727;
 }
 
 .skill {
