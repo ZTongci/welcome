@@ -255,6 +255,15 @@ footer{
   bottom: 10%;
 }
 
+@media (max-width: 769px) {
+  .resize-about-content {
+    width: 90%;
+    padding: auto;
+    position: relative;
+    bottom: 8%;
+  }
+}
+
 .about ul li strong {
   color: #5d6a75;
 }
