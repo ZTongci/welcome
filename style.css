@@ -14,7 +14,7 @@ a:hover {
     color: grey;
 }
 
-p, li{
+p, li, a, span{
   font-size: 25px;
 }
 
