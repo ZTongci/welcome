@@ -1,14 +1,25 @@
 body {
     margin: 0;
     text-align: center;
+    color: rgb(50,50,46,0.85);
+    font-family: 'Dongle', sans-serif;
+    font-size: 20px;
 }
 
 a {
-    color: black;
+    color: rgb(50,50,46,0.9);
 }
 
 a:hover {
     color: grey;
+}
+
+p, li{
+  font-size: 25px;
+}
+
+.btn {
+  border-radius:100px;
 }
 
 #tsparticles{
@@ -23,24 +34,30 @@ a:hover {
 }
 
 
-
 .me-logo {
     width: 150px;
 }
 
 .me {
-    width: 250px;
+    width: 400px;
     margin-bottom: 500px;
-    margin-top: 100px;
+    position: relative;
+    bottom: 10%;
 }
 
 .main-title{
-    font-size: 100px;
+    font-size: 150px;
     position: relative;
     margin-top: 0%;
-    font-family: 'Sacramento', cursive;
+    font-family: 'Lemonada', cursive;
+    color: rgb(50,50,46);
 }
 
+.sub-title{
+  font-size: 40px;
+  margin-bottom: 10%;
+  color: rgb(50,50,46,0.85);
+}
 
 .swipe-icon{
     margin: 6%;
@@ -50,6 +67,17 @@ a:hover {
 .all-contents{
     margin-top: 300px;
     margin-bottom: 10%;
+    width:"100vh";
+    margin:"auto";
+}
+
+@media (max-width: 769px) {
+  .all-contents{
+    margin-top: 0px;
+    transform: scale(0.7);
+    position: relative;
+    bottom: 100px;
+}
 }
 
 .content {
@@ -63,6 +91,7 @@ a:hover {
     padding: 30px;
     font-family: "Lato", sans-serif;
     margin-bottom: 150px;
+    border-radius:100px;
 
   }
 
@@ -186,7 +215,7 @@ footer{
 
 .about .content-about h3 {
   font-weight: 700;
-  font-size: 26px;
+  font-size: 40px;
   color: #3b434a;
   text-transform: uppercase;
 }
@@ -207,7 +236,7 @@ footer{
 }
 
 .about .content-about ul i {
-  font-size: 16px;
+  font-size: 26px;
   margin-right: 5px;
   color: #ffb727;
   line-height: 0;
@@ -223,7 +252,7 @@ footer{
 
 .arrow-about {
   display: block;
-  font-size: 10px;
+  font-size: 26px;
   color: #ffb727;
   float: left;
   line-height: 0;
@@ -231,7 +260,7 @@ footer{
 }
 
 .about .content-about .count-box span{
-  font-size: 36px;
+  font-size: 50px;
   line-height: 30px;
   display: block;
   font-weight: 700;
@@ -243,7 +272,7 @@ footer{
   padding: 15px 0 0 0;
   margin: 0 0 0 50px;
   font-family: "Raleway", sans-serif;
-  font-size: 14px;
+  font-size: 15px;
   color: #5d6a75;
   text-align: left;
 }
@@ -275,7 +304,7 @@ footer{
   display: block;
   margin-top: 20px;
   color: #5d6a75;
-  font-size: 35px;
+  font-size: 45px;
   font-family: "Satisfy", serif;
   transition: ease-in-out 0.3s;
   position: relative;
@@ -318,7 +347,8 @@ footer{
 @media (max-width: 1400px) {
   .about-image,.about-letter{
     text-align: center;
-    margin: auto;
+    margin: auto; 
+    padding: 0;
   }
   .skills-content {
     position: relative;
@@ -334,10 +364,11 @@ footer{
 
 
 /*--------------------------------------------------------------
+.about .content-about .count
 # My Resume
 --------------------------------------------------------------*/
 .resume .resume-title {
-  font-size: 26px;
+  font-size: 30px;
   font-weight: 700;
   margin-top: 20px;
   margin-bottom: 20px;
@@ -353,7 +384,7 @@ footer{
 
 .resume .resume-item h4 {
   line-height: 18px;
-  font-size: 16px;
+  font-size: 22px;
   font-weight: 700;
   text-transform: uppercase;
   color: #ffb727;
