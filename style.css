@@ -47,10 +47,9 @@ p, li, a, span{
 
 .main-title{
     font-size: 150px;
-    position: relative;
-    margin-top: 0%;
     font-family: 'Lemonada', cursive;
     color: rgb(50,50,46);
+    transition:font-size 1s;
 }
 
 .sub-title{
@@ -69,15 +68,19 @@ p, li, a, span{
     margin-bottom: 10%;
     width:"100vh";
     margin:"auto";
+    transition:transform 1s;
 }
 
 @media (max-width: 769px) {
+  .main-title{
+    font-size: 100px;}
   .all-contents{
     margin-top: 0px;
     transform: scale(0.7);
     position: relative;
     bottom: 100px;
 }
+
 }
 
 .content {
@@ -548,10 +551,11 @@ footer{
     padding-bottom: 5rem;
   }
   .masthead .masthead-content h1, .masthead .masthead-content .h1 {
-    font-size: 2.5rem;
+    font-size: 5.0rem;
+    text-align: left;
   }
   .masthead .masthead-content p {
-    font-size: 1.2rem;
+    font-size: 2.5rem;
   }
   .masthead .masthead-content p strong {
     font-weight: 700;
@@ -589,10 +593,10 @@ footer{
       padding-right: 2rem;
     }
     .masthead .masthead-content h1, .masthead .masthead-content .h1 {
-      font-size: 3.5rem;
+      font-size: 4.0rem;
     }
     .masthead .masthead-content p {
-      font-size: 1.3rem;
+      font-size: 2.0rem;
     }
   }
   @media (min-width: 1200px) {
