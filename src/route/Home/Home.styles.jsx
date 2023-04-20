@@ -27,17 +27,25 @@ export const MainTitle = styled.h1`
     font-family: 'Lemonada', cursive;
     color: rgb(50,50,46);
     font-weight: bold;
+    @media (max-width: 1000px) {
+        margin: 20% 0% 2% 0%;
+      }
 `
 
 export const SubTitle = styled.h2`
     margin-bottom: 5%;
     font-size: 70px;
+    line-height: 80%;
+    @media (max-width: 1000px) {
+        margin: 0% 0% 7% 0%;
+      }
 `
 
 
 export const TitleContent = styled.h2`
     font-size: 40px;
     color: rgb(50,50,46,0.85);
+    line-height: 100%;
 `
 
 export const MyImage = styled.img`
@@ -46,5 +54,6 @@ export const MyImage = styled.img`
     height: 50%;
     @media (max-width: 1000px) {
         height: 400px;
+        margin-top: 10%;
       }
     `

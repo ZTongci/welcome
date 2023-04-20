@@ -8,7 +8,7 @@ export const DodoSpline = styled(Spline)`
     &:after{
         content: "";
         background: white;
-        opacity:0.6;
+        opacity:0.2;
         position: absolute;
         bottom: 0;
         top: 0;
