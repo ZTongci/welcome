@@ -18,7 +18,7 @@ import {Routes, Route } from "react-router-dom";
 function App() {
   
   const totalBackground = [<SplineBackround />, 
-  // <DynamicImage />
+  <DynamicImage />
 ];
 
   const randomBackground = ()=>{
