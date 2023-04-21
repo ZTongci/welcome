@@ -21,7 +21,7 @@ export const HeroSection = styled.div`
 `
 
 export const MainTitle = styled.h1`
-    margin: 5% 0% 0% 0%;
+    margin: 50% 0% 0% 0%;
     font-size: 400%;
     letter-spacing: 6px;
     font-family: 'Lemonada', cursive;
@@ -51,7 +51,8 @@ export const TitleContent = styled.h2`
 export const MyImage = styled.img`
     position: relative;
     z-index:100;
-    height: 50%;
+    height: 35%;
+    margin-top: 10%;
     @media (max-width: 1000px) {
         height: 400px;
         margin-top: 10%;

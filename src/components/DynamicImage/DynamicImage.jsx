@@ -239,14 +239,11 @@ const bubbleExlosion = {
         trail: {
           enable: true,
           fillColor: "#FFFFFF",
-          length: 3
+          length: 1
         }
       }
     },
     detectRetina: true,
-    background: {
-      color: "#000"
-    },
     emitters: {
       direction: "none",
       rate: {
@@ -271,17 +268,17 @@ const bubbleExlosion = {
           l: {
             enable: true,
             speed: 0,
-            offset: {
-              min: 20,
-              max: 80
-            }
+            // offset: {
+            //   min: 20,
+            //   max: 80
+            // }
           }
         }
       }
     }
 }
 
-const absorbBackground = {
+const leftdownbubbleBackground = {
   fpsLimit: 120,
   particles: {
     number: {
@@ -498,7 +495,7 @@ const bubblrRclodion2 = {
     },
     number: { density: { enable: true, area: 800 }, value: 0 },
     opacity: {
-      value: 1
+      value: 0.1
     },
     shape: {
       type: "circle"
@@ -519,7 +516,7 @@ const bubblrRclodion2 = {
   emitters: {
     direction: "none",
     rate: {
-      quantity: 5,
+      quantity: 2,
       delay: 0.3
     },
     size: {
@@ -536,7 +533,7 @@ const bubblrRclodion2 = {
 
   
   const totalBackground = [ 
-    absorbBackground, CardBackGround, bubble,
+    leftdownbubbleBackground, CardBackGround, bubble,
     bubbleExlosion,
     bubblrRclodion2
   ];
