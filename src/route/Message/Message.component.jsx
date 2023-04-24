@@ -2,18 +2,19 @@ import React from "react";
 import Zoom from 'react-reveal/Zoom';
 import Slide from 'react-reveal/Slide';
 import Pulse from 'react-reveal/Pulse';
+import {Content} from "./Message.styles";
+
+import TitleSection from "../../components/TitleSection/TitleSection.component"        
 
 function Message() {
 
     return (
-        <div>
-            <Pulse>
-            <h1 className="all-contents main-title">Message</h1>
-            </Pulse>
+        
+            <div>
             <Zoom>
-            <h2 className="sub-title" style={{ margin: "10% 10%" }}>I love what I do. Design isn’t just my job, it’s my life. My clients’ passion fuels my creativity, inspires my ideas, and drives me to pursue the extraordinary.</h2>
+            <TitleSection  MainTitileHandle="Message" SubTitleHandle="I love what I do. Design isn't just my job, it's my life. My clients passion fuels my creativity, inspires my ideas, and drives me to pursue the extraordinary."/>
             </Zoom>
-            <div style={{ backgroundColor: "white", position: "relative", zIndex: "0", opacity:"0.95"}}>
+            <div style={{ backgroundColor: "white", position: "relative", zIndex: "1", opacity:0.95}}>
                 <div className="masthead" >
                     <div class="masthead-content text-white">
                         <div class="container-flex px-4 px-lg-0">
@@ -44,6 +45,7 @@ function Message() {
                     </div>
                 </div>
             </div>
+            
             </div>
         
     );

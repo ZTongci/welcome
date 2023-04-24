@@ -7,7 +7,7 @@ export const AllPage = styled.div`
 `
 
 export const HeroSection = styled.div`
-    height: 100vh;
+    height: 140vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -16,17 +16,16 @@ export const HeroSection = styled.div`
         height: 100%;
       }
 
-    
-
 `
 
 export const MainTitle = styled.h1`
-    margin: 50% 0% 0% 0%;
+    margin: 30% 0% 0% 0%;
     font-size: 400%;
     letter-spacing: 6px;
     font-family: 'Lemonada', cursive;
     color: rgb(50,50,46);
     font-weight: bold;
+
     @media (max-width: 1000px) {
         margin: 20% 0% 2% 0%;
       }
@@ -36,6 +35,7 @@ export const SubTitle = styled.h2`
     margin-bottom: 5%;
     font-size: 70px;
     line-height: 80%;
+
     @media (max-width: 1000px) {
         margin: 0% 0% 7% 0%;
       }

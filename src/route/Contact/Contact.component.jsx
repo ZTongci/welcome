@@ -1,18 +1,21 @@
 import React from "react";
 import Zoom from 'react-reveal/Zoom';
+import TitleSection from "../../components/TitleSection/TitleSection.component"
+import MyButton from "../../components/Button/Button.component";
+import { WhiteScreen } from "./Contact.styles";
 
 function Contact(){
     
     return (
         <Zoom>
-        <h1 className="all-contents main-title">Contact</h1>
-        <h2 className="sub-title" style={{margin:"10% 10%"}}>Want to get in touch? Fill out the form below to send me a message and I will get back to you as soon as possible!</h2>
+        <TitleSection  MainTitileHandle="Contact" SubTitleHandle="Want to get in touch? Fill out the form below to send me a message and I will get back to you as soon as possible!"/>
+
         <main class="mb-4">
             <div class="container-flex px-4 px-lg-5">
                 <div class="row gx-4 gx-lg-5 justify-content-center">
-                    <div class="col-md-10 col-lg-8 col-xl-7 content" >
+                    <div class="col-md-10 col-lg-8 col-xl-7" >
                         {/* <p>Want to get in touch? Fill out the form below to send me a message and I will get back to you as soon as possible!</p> */}
-                        <div class="my-5">
+                        <WhiteScreen class="my-5">
                             {/* <!-- * * * * * * * * * * * * * * *-->
                             <!-- * * SB Forms Contact Form * *-->
                             <!-- * * * * * * * * * * * * * * *-->
@@ -61,9 +64,9 @@ function Contact(){
                                 {/* <!-- an error submitting the form--> */}
                                 <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error sending message!</div></div>
                                 {/* <!-- Submit Button--> */}
-                                <button class="btn btn-outline-dark text-uppercase" id="submitButton" type="submit">Send</button>
+                                <MyButton ButtonLink="./" Content="Send to me" id="submitButton" type="submit"/>
                             </form>
-                        </div>
+                        </WhiteScreen>
                     </div>
                 </div>
             </div>

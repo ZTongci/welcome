@@ -1,12 +1,15 @@
 import React from "react";
 import Zoom from 'react-reveal/Zoom';
 
+import TitleSection from "../../components/TitleSection/TitleSection.component"        
+
+
 function Products(){
     
     return (
         <Zoom>
-        <h1 className="all-contents main-title">Products</h1>
-        <h2 className="sub-title">------------------------------The webpage will be launched.------------------------------</h2>
+            <TitleSection  MainTitileHandle="Products" 
+            SubTitleHandle="----The webpage will be launched.----"/>
         </Zoom>
     );
 }

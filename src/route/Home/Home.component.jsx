@@ -1,5 +1,5 @@
 import React from "react";
-import MessageCotent from "../../components/MessageContent/MessageContent.component"
+import MessageContent from "../../components/MessageContent/MessageContent.component"
 import meImg from "../../image/me.png";
 
 import MessageCotents from "./MessageContents.json"
@@ -24,7 +24,7 @@ function Home() {
                 <MyImage src={meImg} alt="TongCi-Image" />
             </HeroSection>
             {messageJson.map(
-                element => <MessageCotent buttonLink={element.buttonLink} content={element.content} />)}
+                element => <MessageContent buttonLink={element.buttonLink} content={element.content} />)}
         </AllPage>
     );
 }

@@ -1,13 +1,14 @@
 import React from "react";
-import Zoom from 'react-reveal/Zoom';
+import Zoom from "react-reveal/Zoom";
+import TitleSection from "../../components/TitleSection/TitleSection.component"
+import {Content} from "./Blog.styles";
 
 function Blog(){
     
     return (
         <Zoom>
-        <h1 className="all-contents main-title">Blog</h1>
-        <h2 className="sub-title">------------------------------The webpage will be launched.------------------------------</h2>
-        <div className="container px-4 px-lg-5 content"  >
+        <TitleSection  MainTitileHandle="Blog" SubTitleHandle="----The webpage will be launched.----"/>
+        <Content className="container px-4 px-lg-5">
             <div class="row gx-4 gx-lg-5 justify-content-center">
                 <div class="col-md-10 col-lg-8 col-xl-7">
                     {/* <!-- Post preview--> */}
@@ -67,7 +68,7 @@ function Blog(){
                     <div class="d-flex justify-content-end mb-4"><a class="btn btn-outline-dark text-uppercase" href="#!">Older Posts →</a></div>
                 </div>
             </div>
-        </div>
+        </Content>
         </Zoom>
     );
 }

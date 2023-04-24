@@ -1,21 +1,20 @@
-import React from "react";
-
 import Zoom from 'react-reveal/Zoom';
 
-import {RevertButton, Content} from "./MessageContent.styles"
+import {Content} from "./MessageContent.styles"
 
+import MyButton from "../Button/Button.component"
 
-function MessageCotent(props) {
+const MessageContent =({content, buttonLink}) =>{
     return (
 
         <Content>
             <Zoom>
-                <p>{props.content}</p>
-                <RevertButton className="btn btn-lg btn-outline-dark" href={props.buttonLink} >FIND OUT MORE</RevertButton>
+                <p>{content}</p>
+                <MyButton ButtonLink={buttonLink} Content="FIND OUT MORE"/>
             </Zoom>
         </Content>
 
     );
 }
 
-export default MessageCotent;
+export default MessageContent;
