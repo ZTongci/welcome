@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const MainTitle = styled.h1`
-    font-size: 500%;
+    font-size: 600%;
     letter-spacing: 6px;
     color: rgb(50,50,46);
     font-weight: bold;
