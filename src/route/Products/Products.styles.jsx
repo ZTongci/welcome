@@ -4,7 +4,6 @@ export const WhiteScreen = styled.div`
     background-color: rgba(255, 255, 255, 0.85);
     position: relative;
     z-index: 1;
-    opacity:0.99;
     -webkit-box-sizing: border-box;
     -mozbox-sizing: border-box;
     box-sizing: border-box;
@@ -25,9 +24,9 @@ export const WhiteScreen = styled.div`
 `
 export const CategorContainer = styled.div`
     min-width: 20%;
-    height: 480px;
+    height: 500px;
     ${({isPhone})=>isPhone?`width:240px;`:`width:900px;`}
-    // flex:1 1 auto;
+    ${'' /* flex:1 1 auto; */}
     display: flex;
     align-items: center;
     justify-content: center;
@@ -49,7 +48,7 @@ export const CategorContainer = styled.div`
     &:hover {
       cursor: pointer;
       & .background-image {
-        transform: scale(1.05);
+        transform: scale(1.15);
         transition: transform 6s cubic-bezier(0.25, 0.45, 0.45, 0.95);
       }
     }
