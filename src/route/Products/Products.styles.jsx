@@ -24,7 +24,7 @@ export const WhiteScreen = styled.div`
     }
 `
 export const CategorContainer = styled.div`
-    min-width: 20%;
+    min-width: 10%;
     height: 470px;
     ${({isPhone})=>isPhone?`width:300px;`:`width:650px;`}
     // flex:1 1 auto;
@@ -41,6 +41,12 @@ export const CategorContainer = styled.div`
         height: 100%;
         background-size: cover;
         background-position: center;
+      }
+      @media (max-width: 720px) {
+        
+        .background-image {
+          ${({isPhone})=>!isPhone&&`width:100%;height: 70%;`}
+        }
       }
   
     &:hover {

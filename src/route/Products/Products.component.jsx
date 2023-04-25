@@ -18,9 +18,6 @@ const ProductsResourse = [
     {imgUrl:ClimaImg, isPhone:true, title:"WeatherApp", content:"FlutterApp", link:"https://github.com/ZTongci/flutter_clima_app_project"},
     {imgUrl:BMIImg, isPhone:true, title:"BMICalculator", content:"FlutterApp", link:"https://github.com/ZTongci/flutter_bmi_calculator_project"},
     {imgUrl:CrwnClothing, isPhone:false, title:"CrwnClothing", content:"ReactApp", link:"https://github.com/ZTongci/crwn-clothing-v2"},
-    
-
-
 ]
 
 
@@ -45,10 +42,6 @@ function Products() {
                  </CategorContainer>
 
                     )}
-
-
-
-
             </WhiteScreen>
         </Zoom>
     );
