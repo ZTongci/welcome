@@ -74,10 +74,10 @@ function AboutMe() {
     const scrollTop = () => Math.max(window.pageYOffset, document.documentElement.scrollTop, document.body.scrollTop);
     const position = scrollTop();
     if (position >= 1) {
-      isAnimationed = true;
-      countNumberAnimation(100, "Design", 10);
-      countNumberAnimation(90, "Front", 10);
-      countNumberAnimation(75, "Backend", 10);
+      // isAnimationed = true;
+      countNumberAnimation(100, "Design", 1);
+      countNumberAnimation(90, "Front", 1);
+      countNumberAnimation(75, "Backend", 1);
       countNumberAnimation(5, "Happy", 10);
       countNumberAnimation(10, "Projects", 10);
       countNumberAnimation(2, "Experience", 10);
@@ -96,8 +96,6 @@ function AboutMe() {
   return (
     <Zoom>
       <TitleSection MainTitileHandle="About me" SubTitleHandle="Me Introducing My Experience, Skills, and Achievements." />
-
-
       <WhiteScreen>
         <div className="container">
           <div className="row" >
@@ -110,7 +108,7 @@ function AboutMe() {
           </div>
         </div>
       </WhiteScreen>
-      
+
       <TitleSection MainTitileHandle="My Resume" SubTitleHandle="My Work Experience, Education Background, and Skills." />
       <WhiteScreen>
         <Resume />
