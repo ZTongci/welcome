@@ -1,11 +1,11 @@
 {"messageJson":[
     {
         "buttonLink": "/",
-        "content":"I am capable of analyzing corporate finance, formulating management strategies, and simulating future values. Additionally, I have experience in proposing regional revitalization plans using analysis methods such as GHIL, SWOT, and customer journey mapping."
+        "content":"I am capable of analyzing corporate finance, formulating management strategies, and simulating future values. Additionally, I have experience in proposing regional revitalization plans."
     },
     {
         "buttonLink":"https://github.com/ZTongci?tab=repositories&q=&type=&language=dart&sort=stargazers",
-        "content":"I possess expertise in developing web applications and mobile apps using Flutter." 
+        "content":"I possess expertise in developing web applications and Android/IOS apps using Flutter." 
     },
     {
         "buttonLink":"https://github.com/ZTongci?tab=repositories&q=&type=&language=python&sort=stargazers",
@@ -13,6 +13,6 @@
     },
     {
         "buttonLink":"https://github.com/ZTongci?tab=repositories&q=&type=&language=python&sort=stargazers", 
-        "content":"I have expertise in building web applications applications and websites using Node.js and React.js."
+        "content":"I have expertise in design, building web applications using Python, Node.js and React.js."
     }
 ]}

@@ -25,7 +25,7 @@ export const WhiteScreen = styled.div`
 `
 export const CategorContainer = styled.div`
     min-width: 20%;
-    height: 470px;
+    height: 480px;
     ${({isPhone})=>isPhone?`width:240px;`:`width:900px;`}
     // flex:1 1 auto;
     display: flex;
@@ -33,7 +33,7 @@ export const CategorContainer = styled.div`
     justify-content: center;
     border-radius: 20px;
     box-shadow: 10px 10px 25px rgb(170,170,170,0.6);
-    margin: 0 25px 50px;
+    margin: 0 35px 70px;
     overflow: hidden;
 
     .background-image {
@@ -49,20 +49,13 @@ export const CategorContainer = styled.div`
     &:hover {
       cursor: pointer;
       & .background-image {
-        transform: scale(1.1);
+        transform: scale(1.05);
         transition: transform 6s cubic-bezier(0.25, 0.45, 0.45, 0.95);
       }
     }
   
  
-  
-    // &:first-child {
-    //   margin-right: 25px;
-    // }
-  
-    // &:last-child {
-    //   margin-left: 15px;
-    // }
+
     .category-body-container {
         height: 100px;
         padding: 0 25px;
@@ -73,7 +66,7 @@ export const CategorContainer = styled.div`
         border-radius:10px;
         box-shadow: 1px 1px 5px gray;
         background-color: white;
-        opacity: 0.8;
+        opacity: 0.6;
         position: absolute;
     
         h2 {
