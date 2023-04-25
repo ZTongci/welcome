@@ -56,7 +56,7 @@ export const ArrowTitle = styled.strong`
 `
 
 export const ArrowContent = styled.span`
-    color: #5d6a75;
+    color: rgb(50,50,46,0.8);
     font-size: 25px;
     font-weight: 500;
     @media (max-width: 1200px) {

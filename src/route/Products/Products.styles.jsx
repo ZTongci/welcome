@@ -24,9 +24,9 @@ export const WhiteScreen = styled.div`
     }
 `
 export const CategorContainer = styled.div`
-    min-width: 10%;
+    min-width: 20%;
     height: 470px;
-    ${({isPhone})=>isPhone?`width:300px;`:`width:650px;`}
+    ${({isPhone})=>isPhone?`width:240px;`:`width:900px;`}
     // flex:1 1 auto;
     display: flex;
     align-items: center;
@@ -42,11 +42,8 @@ export const CategorContainer = styled.div`
         background-size: cover;
         background-position: center;
       }
-      @media (max-width: 720px) {
-        
-        .background-image {
-          ${({isPhone})=>!isPhone&&`width:100%;height: 70%;`}
-        }
+      @media (max-width: 600px) {
+        ${({isPhone})=>!isPhone&&`width:100%;height: 240px;`}
       }
   
     &:hover {

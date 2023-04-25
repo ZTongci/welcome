@@ -15,9 +15,10 @@ const ProductsResourse = [
     {imgUrl:TingDogImg, isPhone:false, title:"TinDog", content:"Website", link:"https://ztongci.github.io/TingDog/"},
     {imgUrl:FlashChatImg, isPhone:true, title:"FlashChat", content:"FlutterApp", link:"https://github.com/ZTongci/flutter_flash_chat_project"},
     {imgUrl:TwitterImg, isPhone:true, title:"Twitter", content:"FlutterApp", link:"https://github.com/ZTongci/flutter_twitter_project"},
+    {imgUrl:CrwnClothing, isPhone:false, title:"CrwnClothing", content:"ReactApp", link:"https://github.com/ZTongci/crwn-clothing-v2"},
     {imgUrl:ClimaImg, isPhone:true, title:"WeatherApp", content:"FlutterApp", link:"https://github.com/ZTongci/flutter_clima_app_project"},
     {imgUrl:BMIImg, isPhone:true, title:"BMICalculator", content:"FlutterApp", link:"https://github.com/ZTongci/flutter_bmi_calculator_project"},
-    {imgUrl:CrwnClothing, isPhone:false, title:"CrwnClothing", content:"ReactApp", link:"https://github.com/ZTongci/crwn-clothing-v2"},
+
 ]
 
 

@@ -41,7 +41,7 @@ export const ProgressBar = styled.div`
     display: block;
     font-weight: 700;
     background-color: #ffb727;
-    ${(({progress})=>`width:${progress}`)}
+    ${(({progress})=>`width:${progress};`)}
 `
 
 export const SkillContent = styled.p`

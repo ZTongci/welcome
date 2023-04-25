@@ -20,7 +20,7 @@ const ArrowMesssges =[
 
 
 const ArrowMessage = ()=>{
-    console.log(ArrowMesssges.map(ContentData=>ContentData))
+
 
 
     return(<div className="row">{ArrowMesssges.map((ContentData,id)=>

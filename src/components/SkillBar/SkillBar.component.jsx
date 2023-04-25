@@ -1,27 +1,22 @@
 import {SkillTotal, ProgressBar, SkillContent} from "./SkillBar.style";
+import { useState, useEffect } from "react";
 
 
-const percentage = 100;
+const SkillBar = ({SkillDatas})=>{
+  
 
-
-const SkillDatas = [
-    {skillContent:"Design 100%", percentage:100},
-    {skillContent:"Front develop 90%", percentage:90},
-    {skillContent:"Backend develop 75%", percentage:75}
-];
-
-
-const SkillBar = ()=>{
 
 return(
 <SkillTotal>
-{SkillDatas.map((element, index)=>
-<div key={index}>
+{SkillDatas.map((element, index)=>{
+ 
+  return (<div key={index}>
 <SkillContent>{element.skillContent}</SkillContent>
 <div className="progress">
   <ProgressBar progress={`${element.percentage}%`} />
 </div>
-</div>
+</div>);}
+
     )}
 </SkillTotal>);
 }

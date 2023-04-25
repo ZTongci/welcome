@@ -63,6 +63,8 @@ export const ClientTitle = styled.div`
     align-items:center;
     svg{
         font-size: 35px;
+        width:35px;
+       
         ${({ IconColorHandle }) => `color: ${IconColorHandle}`};
     }
 
@@ -81,11 +83,11 @@ export const ClientCount = styled.span`
 export const ClientContent = styled.p`
     text-align:start;
     font-size:25px;
-    color: rgb(50,50,46,0.6);
+    color: rgb(50,50,46,0.8);
     line-height: 25px;
 `
 
 export const ClientContentStrong = styled.strong`
     font-size:30px;
-    color: rgb(50,50,46,0.7);
+    color: #5d6a75;
 `
