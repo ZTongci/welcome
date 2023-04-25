@@ -6,6 +6,7 @@ export const MainTitle = styled.h1`
     color: rgb(50,50,46);
     font-weight: bold;
     margin: 5% 0% 2% 0%;
+    line-height:50%;
    
     @media (max-width: 1000px) {
         margin: 20% 0% 2% 0%;

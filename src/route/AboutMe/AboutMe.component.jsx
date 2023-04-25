@@ -19,17 +19,6 @@ function AboutMe() {
       <TitleSection MainTitileHandle="About me" SubTitleHandle="Me Introducing My Experience, Skills, and Achievements." />
 
 
-      {/* <section id="hero">
-          <div className="hero-container">
-            <img src={meImg} className="here-me" />
-            <Pulse>
-            <h1 className="hero-mainTitle">TONGCI ZHANG</h1>
-            </Pulse>
-            <h2 className="hero-subTitle">I'm a Professional Fullstack Engineer In Tokyo</h2>
-            <a href="#about" className="btn-scroll scrollto" title="Scroll Down"><i className="bx bx-chevron-down"></i></a>
-          </div>
-        </section> */}
-
       <WhiteScreen>
         <div className="container">
 

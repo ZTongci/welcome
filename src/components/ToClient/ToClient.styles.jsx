@@ -12,19 +12,21 @@ export const ClientTotal = styled.div`
       @media (max-width: 1200px) {
         position: relative;
         top:50px;
-        left:238px
+        left:20px
       }
       @media (max-width: 992px) {
         margin:0;
         position: relative;
         top:20px;
-        left:115px;
+        left:20px;
+        
       }
       @media (max-width: 768px) {
         margin:0;
         position: relative;
         top:20px;
-        left:23px;
+        left:22px;
+        width:95%;
       }
 
 `
@@ -36,7 +38,14 @@ export const ClientDiv = styled.div`
     `left:11px;
     `};
 
+    @media (max-width: 1200px) {
+      max-width:150%;
+      width:150%;
+      ${({ ContentTitle }) => ((ContentTitle=== "Projects:")|| (ContentTitle==="Advantage:"))&& 
+    `left:0px;`}
+    }
     @media (max-width: 992px) {
+        width:85%;
         margin:0;
         position: relative;
         top:20px;

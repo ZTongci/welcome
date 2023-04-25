@@ -10,21 +10,23 @@ export const ArrowDiv = styled.div`
         left:20px
       }
       @media (max-width: 1200px) {
+        margin:0% 0%;
+        width:100%;
         position: relative;
         top:50px;
-        left:238px
+        left:20px
       }
       @media (max-width: 992px) {
         margin:0;
         position: relative;
         top:20px;
-        left:115px;
+        left:20px;
       }
       @media (max-width: 768px) {
         margin:0;
         position: relative;
         top:20px;
-        left:25px;
+        left:22px;
       }
 `
 

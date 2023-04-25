@@ -12,21 +12,25 @@ export const SkillTotal = styled.div`
         left:10px
       }
       @media (max-width: 1200px) {
+        max-width:150%;
+        width:150%;
         position: relative;
-        top:50px;
-        left:238px
+        top:20px;
+        left:10px
       }
       @media (max-width: 992px) {
         margin:0;
         position: relative;
         top:20px;
-        left:105px;
+        left:8px;
+        width:85%;
       }
       @media (max-width: 768px) {
         margin:0;
         position: relative;
         top:20px;
         left:13px;
+        width:95%;
       }
       
 `

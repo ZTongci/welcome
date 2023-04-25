@@ -6,6 +6,7 @@ import {Link} from "react-router-dom";
 
 export const NavLabelLink = styled(Link)`
     font-size: 40px;
+    text-align: center;
 `
 
 export const NavLabelToggle = styled(NavLabelLink)`
