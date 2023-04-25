@@ -142,7 +142,6 @@ p, li, a, span, strong{
     .masthead .masthead-content {
       padding-top: 0;
       padding-bottom: 0;
-   
       padding-right: 2rem;
     }
     .masthead .masthead-content h1, .masthead .masthead-content .h1 {
@@ -156,5 +155,11 @@ p, li, a, span, strong{
   @media (min-width: 1200px) {
     .masthead {
       width: 75vw;
+    }
+  }
+  @media (max-width: 792px) {
+    .masthead, .masthead-content {
+      padding: 0px;
+      text-align: center;
     }
   }

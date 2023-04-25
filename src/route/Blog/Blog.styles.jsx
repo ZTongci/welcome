@@ -10,7 +10,7 @@ export const Content = styled.div`
     -webkit-box-sizing: border-box;
     -mozbox-sizing: border-box;
     box-sizing: border-box;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.85);
     box-shadow: 1px 1px 5px gray;
     padding: 50px;
     font-family: "Lato", sans-serif;

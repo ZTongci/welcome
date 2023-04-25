@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 
 export const WhiteScreen = styled.div`
-    background-color: white;
+    background-color: rgba(255, 255, 255, 1);
     position: relative;
     z-index: 1;
     opacity:0.99;
