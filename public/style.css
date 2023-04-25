@@ -159,7 +159,7 @@ p, li, a, span, strong{
   }
   @media (max-width: 792px) {
     .masthead, .masthead-content {
-      padding: 0px;
+      padding: 20px;
       text-align: center;
     }
   }
