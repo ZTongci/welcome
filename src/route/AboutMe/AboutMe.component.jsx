@@ -70,24 +70,45 @@ function AboutMe() {
     }, speed);
   }
 
+// 防抖函数
+function throttle(fn,delay){
+  let valid = true
+  return function() {
+     if(!valid){
+         //休息时间 暂不接客
+         return false 
+     }
+     // 工作时间，执行函数并且在间隔期内把状态位设为无效
+      valid = false
+      setTimeout(() => {
+          fn()
+          valid = true;
+      }, delay)
+  }
+}
+
+
+
   const scrollHandle = (e) => {
     const scrollTop = () => Math.max(window.pageYOffset, document.documentElement.scrollTop, document.body.scrollTop);
     const position = scrollTop();
     if (position >= 1) {
+      console.log(position);
       // isAnimationed = true;
-      countNumberAnimation(100, "Design", 1);
-      countNumberAnimation(90, "Front", 1);
-      countNumberAnimation(75, "Backend", 1);
+      countNumberAnimation(100, "Design", 10);
+      countNumberAnimation(90, "Front", 10);
+      countNumberAnimation(75, "Backend", 10);
       countNumberAnimation(5, "Happy", 10);
       countNumberAnimation(10, "Projects", 10);
       countNumberAnimation(2, "Experience", 10);
       countNumberAnimation(4, "Advantage", 10);
+      
     }
   }
 
   useEffect(() => {
-    window.addEventListener("scroll", scrollHandle);
-    return () => document.removeEventListener("scroll", scrollHandle);
+    window.addEventListener("scroll", throttle(scrollHandle,1000));
+    return () => document.removeEventListener("scroll", throttle(scrollHandle,100));
   }, []);
 
 
