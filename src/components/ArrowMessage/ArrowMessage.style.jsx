@@ -4,9 +4,11 @@ import styled from "styled-components";
 export const ArrowDiv = styled.div`
     padding:0px;
     margin: 10% 0%;
+
     @media (max-width: 1400px) {
+        margin: 8% 0%;
         position: relative;
-        top:50px;
+        top:55px;
         left:20px
       }
       @media (max-width: 1200px) {

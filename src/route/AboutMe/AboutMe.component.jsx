@@ -70,7 +70,7 @@ function AboutMe() {
     }, speed);
   }
 
-// 防抖函数
+// 节流函数
 function throttle(fn,delay){
   let valid = true
   return function() {
@@ -86,6 +86,18 @@ function throttle(fn,delay){
       }, delay)
   }
 }
+
+// 防抖函数
+function debounce(fn, wait) {
+  var timeout = null;
+  return function() {
+      if(timeout !== null) 
+              clearTimeout(timeout);
+      timeout = setTimeout(fn, wait);
+  }
+}
+
+
 
 
 
@@ -107,8 +119,8 @@ function throttle(fn,delay){
   }
 
   useEffect(() => {
-    window.addEventListener("scroll", throttle(scrollHandle,1000));
-    return () => document.removeEventListener("scroll", throttle(scrollHandle,100));
+    window.addEventListener("scroll", debounce(scrollHandle,1300));
+    // return () => document.removeEventListener("scroll", debounce(scrollHandle,4000));
   }, []);
 
 

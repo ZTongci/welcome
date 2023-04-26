@@ -3,10 +3,10 @@ import styled from "styled-components";
 export const ClientTotal = styled.div`
     width: 100%;
     position: relative;
-    bottom: 8%;
+    bottom: 10%;
     @media (max-width: 1400px) {
         position: relative;
-        top:50px;
+        top:20px;
         left:20px
       }
       @media (max-width: 1200px) {
@@ -62,9 +62,8 @@ export const ClientTitle = styled.div`
     flex-direction:row;
     align-items:center;
     svg{
-        font-size: 35px;
-        width:35px;
-       
+        font-size: 45px;
+        width:45px;
         ${({ IconColorHandle }) => `color: ${IconColorHandle}`};
     }
 
@@ -74,9 +73,10 @@ export const ClientTitle = styled.div`
 export const ClientCount = styled.span`
     font-weight: 900;
     margin:0 5%;
-    font-size:35px;
+    font-size:45px;
     position:relative;
     top:5px;
+    color: #5d6a75;
 `
 
 
@@ -85,6 +85,7 @@ export const ClientContent = styled.p`
     font-size:25px;
     color: rgb(50,50,46,0.8);
     line-height: 25px;
+    margin:0%;
 `
 
 export const ClientContentStrong = styled.strong`

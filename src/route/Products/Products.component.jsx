@@ -30,13 +30,13 @@ const ProductsResourse = [
     {imgUrl:PhoneCallIMG, isPhone:false, title:"PhoneCallApp", content:"Design", link:""},
     
     {imgUrl:MeettingIMG, isPhone:false, title:"MeettingApp", content:"Design", link:""},
-    {imgUrl:BMIImg, isPhone:true, title:"BMICalculator", content:"FlutterApp", link:"https://github.com/ZTongci/flutter_bmi_calculator_project"},
-    {imgUrl:ClimaImg, isPhone:true, title:"WeatherApp", content:"FlutterApp", link:"https://github.com/ZTongci/flutter_clima_app_project"},
+    {imgUrl:BMIImg, isPhone:true, title:"BMI", content:"FlutterApp", link:"https://github.com/ZTongci/flutter_bmi_calculator_project"},
+    {imgUrl:ClimaImg, isPhone:true, title:"Weather", content:"FlutterApp", link:"https://github.com/ZTongci/flutter_clima_app_project"},
     {imgUrl:CrwnClothing, isPhone:false, title:"CrwnClothing", content:"ReactApp", link:"https://github.com/ZTongci/crwn-clothing-v2"},
-    {imgUrl:TingDogImg, isPhone:false, title:"TinDog", content:"Website", link:"https://ztongci.github.io/TingDog/"},
-    {imgUrl:IcelandIMG, isPhone:false, title:"Iceland", content:"Design", link:""},
-    {imgUrl:BeerIMG, isPhone:false, title:"Beer", content:"Design", link:""},
-    {imgUrl:BlackFridayIMG, isPhone:false, title:"BlackFridaySell", content:"Design", link:""},
+    {imgUrl:TingDogImg, isPhone:false, title:"TinDog", content:"Website", link:"https://ztongci.github.io/TingDog/", flex:true},
+    {imgUrl:IcelandIMG, isPhone:false, title:"Iceland", content:"Design", link:"", flex:true},
+    {imgUrl:BeerIMG, isPhone:false, title:"Beer", content:"Design", link:"", flex:true},
+    {imgUrl:BlackFridayIMG, isPhone:false, title:"BlackFridaySell", content:"Design", link:"", flex:true},
 
 ]
 
@@ -51,7 +51,7 @@ function Products() {
             <WhiteScreen>
                 {ProductsResourse.map(element=>
 
-                     <CategorContainer isPhone={element.isPhone}>
+                     <CategorContainer isPhone={element.isPhone} isflex={element.flex}>
                      <a className="background-image" href={element.link} style={{
                          backgroundImage: `url(${element.imgUrl})`,
                      }} />

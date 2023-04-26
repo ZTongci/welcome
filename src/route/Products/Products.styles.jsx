@@ -1,5 +1,9 @@
 import styled from "styled-components"
 
+const screenFullHeight = 500;
+const screenWeight = (height)=>height*16/9;
+const phoneWeight = (height)=>height*9/16;
+
 export const WhiteScreen = styled.div`
     background-color: rgba(255, 255, 255, 0.85);
     position: relative;
@@ -16,7 +20,7 @@ export const WhiteScreen = styled.div`
     display: flex;
     flex-wrap: wrap;
 
-    justify-content: center;
+    justify-content: space-around;
 
     @media (max-width: 1200px) {
       padding:60px 0px;
@@ -24,9 +28,9 @@ export const WhiteScreen = styled.div`
 `
 export const CategorContainer = styled.div`
     min-width: 20%;
-    height: 500px;
-    ${({isPhone})=>isPhone?`width:240px;`:`width:900px;`}
-    ${'' /* flex:1 1 auto; */}
+    height: ${screenFullHeight}px;
+    ${({isPhone})=>isPhone?`width:${phoneWeight(screenFullHeight)}px;`:`width:${screenWeight(screenFullHeight)}px;`}
+    ${({isflex})=>isflex&& `min-width: 40%;height: 710px;width:${screenWeight(710)}px;`}
     display: flex;
     align-items: center;
     justify-content: center;
@@ -35,14 +39,23 @@ export const CategorContainer = styled.div`
     margin: 0 35px 70px;
     overflow: hidden;
 
+    @media (max-width: 1326px) {
+      height: ${screenFullHeight}px;
+      ${({isPhone})=>!isPhone&&`width:${screenWeight(screenFullHeight)}px;min-width: 50%;`}
+    }
+
     .background-image {
         width: 100%;
         height: 100%;
         background-size: cover;
         background-position: center;
       }
-      @media (max-width: 600px) {
-        ${({isPhone})=>!isPhone&&`width:100%;height: 240px;`}
+      @media (max-width: 924px) {
+        ${({isPhone})=>!isPhone?`width:${screenWeight(400)}px;height: 400px;`:`width:${phoneWeight(450)}px;height: 450px;`}
+      }
+
+      @media (max-width: 680px) {
+        ${({isPhone})=>!isPhone?`width:${screenWeight(250)}px;height: 250px;`:`width:${phoneWeight(300)}px;height: 300px;`}
       }
   
     &:hover {

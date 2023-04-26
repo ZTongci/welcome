@@ -4,7 +4,7 @@ import styled from "styled-components";
 
 export const SkillTotal = styled.div`
     position: relative;
-    bottom: 15%;
+    bottom: 14.5%;
     right:10px;
     @media (max-width: 1400px) {
         position: relative;
@@ -12,21 +12,22 @@ export const SkillTotal = styled.div`
         left:10px
       }
       @media (max-width: 1200px) {
+        margin:5% 0;
         max-width:150%;
         width:150%;
         position: relative;
-        top:20px;
+        top:40px;
         left:10px
       }
       @media (max-width: 992px) {
-        margin:0;
+        margin:5% 0;
         position: relative;
         top:20px;
         left:8px;
         width:85%;
       }
       @media (max-width: 768px) {
-        margin:0;
+        margin:5% 0;
         position: relative;
         top:20px;
         left:13px;
