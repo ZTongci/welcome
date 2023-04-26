@@ -38,13 +38,14 @@ export const Masthead = styled.div`
         max-width: 35rem;
         padding-top: 5rem;
         padding-bottom: 5rem;
-        line-height: 150%;
+        line-height: 250%;
     }
     .masthead-content h1, .h1 {
         font-size: 5.0rem;
         text-align: left;
         padding-top: 5rem;
         line-height: 80%;
+        letter-spacing: -1px;
       }
       p {
         font-size: 2.5rem;
@@ -72,7 +73,7 @@ export const Masthead = styled.div`
             padding-right: 2rem;
           }
           .masthead-content h1, .h1 {
-            font-size: 4.0rem;
+            font-size: 5.0rem;
         }
           p {
             font-size: 2.0rem;

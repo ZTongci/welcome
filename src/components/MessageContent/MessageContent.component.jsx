@@ -1,4 +1,5 @@
 import Zoom from 'react-reveal/Zoom';
+import Fade  from "react-reveal/Fade";
 
 import {Content} from "./MessageContent.styles"
 
@@ -8,10 +9,10 @@ const MessageContent =({content, buttonLink}) =>{
     return (
 
         <Content>
-            <Zoom>
+            <Fade>
                 <p>{content}</p>
                 <MyButton ButtonLink={buttonLink} Content="FIND OUT MORE"/>
-            </Zoom>
+            </Fade>
         </Content>
 
     );

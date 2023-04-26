@@ -1,7 +1,6 @@
 import React, {Fragment} from "react";
 import Zoom from 'react-reveal/Zoom';
-import Slide from 'react-reveal/Slide';
-import Pulse from 'react-reveal/Pulse';
+import Fade from 'react-reveal/Fade';
 import {WhiteBackground, Masthead} from "./Message.styles";
 
 import TitleSection from "../../components/TitleSection/TitleSection.component"        
@@ -9,7 +8,6 @@ import TitleSection from "../../components/TitleSection/TitleSection.component"
 function Message() {
 
     return (
-        
             <Fragment>
             <Zoom>
             <TitleSection  MainTitileHandle="Message" SubTitleHandle="I love what I do. Design isn't just my job, it's my life. My clients passion fuels my creativity, inspires my ideas, and drives me to pursue the extraordinary."/>
@@ -17,8 +15,8 @@ function Message() {
             <WhiteBackground>
                 <Masthead>
                     <div class="masthead-content text-white">
-                        <div class="container-flex px-4 px-lg-0">
-                        <Slide left>
+                        <div class="container-flex px-lg-0">
+                        <Fade>
                             <h1>I am Developer and Designer</h1>
                             <p class="mb-5" style={{ textAlign: "left" }}>I bring natural curiosity, fresh perspectives, years of experience, strategic insight, uncompromising quality, and a ridiculous love for what I do to each and every project.
                                 <br />
@@ -39,7 +37,7 @@ function Message() {
                                 <br />
                                 <br />
                                 As a web developer, I am excited to be a part of this dynamic and constantly evolving field, and I look forward to creating innovative and impactful websites that make a difference.</p>
-                                </Slide>
+                        </Fade>
 
                         </div>
                     </div>

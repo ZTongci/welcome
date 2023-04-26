@@ -1,5 +1,6 @@
-import React, { useEffect, useState, useLayoutEffect } from "react";
+import React, { useEffect, useState, Fragment } from "react";
 import Zoom from 'react-reveal/Zoom';
+import Fade from 'react-reveal/Fade';
 
 import TitleSection from "../../components/TitleSection/TitleSection.component"
 import { WhiteScreen, CategorContainer } from "./Products.styles";
@@ -75,17 +76,19 @@ function Products() {
         return () => window.removeEventListener('resize', debounce(reportWindowSize,10));
     });
     return (
-        <Zoom>
-            <TitleSection MainTitileHandle="Products"
-                SubTitleHandle="This is my Work example." />
-
+        <Fragment>
+            <Zoom>
+                <TitleSection MainTitileHandle="Products"
+                    SubTitleHandle="This is my Work example." />
+            </Zoom>
             <WhiteScreen>
+            
                 {Productslist.map((element,index) =>
 
                     <CategorContainer isPhone={element.isPhone} isflex={element.flex} key={index}>
-                        <a className="background-image" href={element.link} style={{
+                        <Fade><a className="background-image" href={element.link} style={{
                             backgroundImage: `url(${element.imgUrl})`,
-                        }} />
+                        }} /></Fade>
                         <div className='category-body-container'>
                             <h2>{element.title}</h2>
                             <p>{element.content}</p>
@@ -93,8 +96,10 @@ function Products() {
                     </CategorContainer>
 
                 )}
+            
             </WhiteScreen>
-        </Zoom>
+
+        </Fragment>
     );
 }
 

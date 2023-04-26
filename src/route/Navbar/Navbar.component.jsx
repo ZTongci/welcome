@@ -1,14 +1,15 @@
 import React, { Fragment } from "react";
 import { Link, Outlet } from "react-router-dom";
 import meLogo from "../../image/me-logo.png";
-import Tada from 'react-reveal/Tada';
+import Fade from 'react-reveal/Fade';
 import Footer from "../../components/Footer/Footer.component";
 
 import {
   NavLabelLink,
   NavBarTotal,
   Welcome,
-  NavLabelToggle} from "./Navbar.styles";
+  NavLabelToggle,
+  NavLabel} from "./Navbar.styles";
 
 
 function Navbar() {
@@ -30,9 +31,12 @@ function Navbar() {
     <Fragment>
       <NavBarTotal className="navbar bg-light">
         <div className="container-fluid">
-          <Tada>
-            <Link className="navbar-brand" to="/"><img src={meLogo} alt="" srcset="" className="me-logo" /></Link>
-          </Tada>
+          <Fade>
+            <Link className="navbar-brand" to="/" >
+              {/* <img src={meLogo} alt="" srcset="" className="me-logo" /> */}
+              <NavLabel>Tongci</NavLabel>
+              </Link>
+          </Fade>
           <button className="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
             <span className="navbar-toggler-icon"></span>
           </button>

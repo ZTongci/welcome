@@ -1,4 +1,4 @@
-import React from "react";
+import React,{Fragment} from "react";
 import me from "../../image/me-about.JPG";
 import TitleSection from "../../components/TitleSection/TitleSection.component"
 
@@ -9,6 +9,7 @@ import ToClient from "../../components/ToClient/ToClient.component";
 import SkillBar from "../../components/SkillBar/SkillBar.component";
 import Resume from "../../components/Resume/Resume.component";
 import Zoom from 'react-reveal/Zoom';
+import Fade from 'react-reveal/Fade';
 import { useState, useEffect } from "react";
 
 function AboutMe() {
@@ -127,9 +128,12 @@ function debounce(fn, delay) {
 
 
   return (
+    <Fragment>
     <Zoom>
       <TitleSection MainTitileHandle="About me" SubTitleHandle="Me Introducing My Experience, Skills, and Achievements." />
+      </Zoom>
       <WhiteScreen>
+        <Fade>
         <div className="container">
           <div className="row" >
             <MyImage src={me} alt="myImg" className="col-lg-7 " />
@@ -140,13 +144,18 @@ function debounce(fn, delay) {
             </MyImformation>
           </div>
         </div>
+        </Fade>
       </WhiteScreen>
-
+      <Zoom>
       <TitleSection MainTitileHandle="My Resume" SubTitleHandle="My Work Experience, Education Background, and Skills." />
+      </Zoom>
       <WhiteScreen>
+      <Fade>
         <Resume />
+        </Fade>
       </WhiteScreen>
-    </Zoom>
+    
+    </Fragment>
   );
 }
 

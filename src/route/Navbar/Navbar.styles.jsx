@@ -5,8 +5,16 @@ import {Link} from "react-router-dom";
 
 
 export const NavLabelLink = styled(Link)`
-    font-size: 40px;
+    font-size:40px;
     text-align: center;
+`
+
+export const NavLabel = styled.span`
+    text-align: center;
+    font-family: 'Baloo 2', cursive;
+    font-size:30px;
+    font-weight:200;
+    color: rgb(50,50,46,.9);
 `
 
 export const NavLabelToggle = styled(NavLabelLink)`
