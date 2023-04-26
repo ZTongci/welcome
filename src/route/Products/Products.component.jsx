@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Zoom from 'react-reveal/Zoom';
 
 import TitleSection from "../../components/TitleSection/TitleSection.component"
@@ -22,46 +22,73 @@ import BlackFridayIMG from "../../image/projects/project14.png";
 
 
 const ProductsResourse = [
-    {imgUrl:SalaryIMG, isPhone:true, title:"SalaryApp", content:"FlutterApp", link:""},
-    {imgUrl:EmotionIMG, isPhone:false, title:"Emotion", content:"Design", link:""},
-    {imgUrl:VincentIMG, isPhone:false, title:"Vincent", content:"Design", link:""},
-    {imgUrl:FlashChatImg, isPhone:true, title:"FlashChat", content:"FlutterApp", link:"https://github.com/ZTongci/flutter_flash_chat_project"},
-    {imgUrl:TwitterImg, isPhone:true, title:"Twitter", content:"FlutterApp", link:"https://github.com/ZTongci/flutter_twitter_project"},
-    {imgUrl:PhoneCallIMG, isPhone:false, title:"PhoneCallApp", content:"Design", link:""},
-    
-    {imgUrl:MeettingIMG, isPhone:false, title:"MeettingApp", content:"Design", link:""},
-    {imgUrl:BMIImg, isPhone:true, title:"BMI", content:"FlutterApp", link:"https://github.com/ZTongci/flutter_bmi_calculator_project"},
-    {imgUrl:ClimaImg, isPhone:true, title:"Weather", content:"FlutterApp", link:"https://github.com/ZTongci/flutter_clima_app_project"},
-    {imgUrl:CrwnClothing, isPhone:false, title:"CrwnClothing", content:"ReactApp", link:"https://github.com/ZTongci/crwn-clothing-v2"},
-    {imgUrl:TingDogImg, isPhone:false, title:"TinDog", content:"Design", link:"https://ztongci.github.io/TingDog/", flex:true},
-    {imgUrl:IcelandIMG, isPhone:false, title:"Iceland", content:"Design", link:"", flex:true},
-    {imgUrl:BeerIMG, isPhone:false, title:"Beer", content:"Design", link:"", flex:true},
-    {imgUrl:BlackFridayIMG, isPhone:false, title:"BlackFridaySell", content:"Design", link:"", flex:true},
+    { type: 3, imgUrl: SalaryIMG, isPhone: true, title: "SalaryApp", content: "FlutterApp", link: "" },
+    { type: 1, imgUrl: EmotionIMG, isPhone: false, title: "Emotion", content: "Design", link: "" },
+    { type: 1, imgUrl: VincentIMG, isPhone: false, title: "Vincent", content: "Design", link: "" },
+    { type: 3, imgUrl: FlashChatImg, isPhone: true, title: "FlashChat", content: "FlutterApp", link: "https://github.com/ZTongci/flutter_flash_chat_project" },
+    { type: 3, imgUrl: TwitterImg, isPhone: true, title: "Twitter", content: "FlutterApp", link: "https://github.com/ZTongci/flutter_twitter_project" },
+    { type: 1, imgUrl: PhoneCallIMG, isPhone: false, title: "PhoneCallApp", content: "Design", link: "" },
 
+    { type: 1, imgUrl: MeettingIMG, isPhone: false, title: "MeettingApp", content: "Design", link: "" },
+    { type: 3, imgUrl: BMIImg, isPhone: true, title: "BMI", content: "FlutterApp", link: "https://github.com/ZTongci/flutter_bmi_calculator_project" },
+    { type: 3, imgUrl: ClimaImg, isPhone: true, title: "Weather", content: "FlutterApp", link: "https://github.com/ZTongci/flutter_clima_app_project" },
+    { type: 2, imgUrl: CrwnClothing, isPhone: false, title: "CrwnClothing", content: "ReactApp", link: "https://github.com/ZTongci/crwn-clothing-v2" },
+    { type: 1, imgUrl: TingDogImg, isPhone: false, title: "TinDog", content: "Design", link: "https://ztongci.github.io/TingDog/", flex: true },
+    { type: 1, imgUrl: IcelandIMG, isPhone: false, title: "Iceland", content: "Design", link: "", flex: true },
+    { type: 1, imgUrl: BeerIMG, isPhone: false, title: "Beer", content: "Design", link: "", flex: true },
+    { type: 1, imgUrl: BlackFridayIMG, isPhone: false, title: "BlackFridaySell", content: "Design", link: "", flex: true },
 ]
+
+const ProductsResourseInit = ProductsResourse.concat();
 
 
 function Products() {
+    const [Productslist, setProductslist] = useState(ProductsResourse);
 
+    function reportWindowSize() {
+        if (window.innerWidth <= 1350) {
+            const resizeList = ProductsResourse.sort((first, second) => first.type - second.type
+            )
+            setProductslist(resizeList);
+        }
+        else {
+            setProductslist(ProductsResourseInit);
+        }
+    };
+
+    // 防抖函数
+    function debounce(fn, wait) {
+        var timeout = null;
+        return function () {
+            if (timeout !== null)
+                clearTimeout(timeout);
+            timeout = setTimeout(fn, wait);
+        }
+    }
+
+    useEffect(() => {
+        window.addEventListener('resize', debounce(reportWindowSize,10));
+        return () => window.removeEventListener('resize', debounce(reportWindowSize,10));
+    }, []);
     return (
         <Zoom>
             <TitleSection MainTitileHandle="Products"
                 SubTitleHandle="This is my Work example." />
 
             <WhiteScreen>
-                {ProductsResourse.map(element=>
+                {Productslist.map(element =>
 
-                     <CategorContainer isPhone={element.isPhone} isflex={element.flex}>
-                     <a className="background-image" href={element.link} style={{
-                         backgroundImage: `url(${element.imgUrl})`,
-                     }} />
-                     <div className='category-body-container'>
-                         <h2>{element.title}</h2>
-                         <p>{element.content}</p>
-                     </div>
-                 </CategorContainer>
+                    <CategorContainer isPhone={element.isPhone} isflex={element.flex}>
+                        <a className="background-image" href={element.link} style={{
+                            backgroundImage: `url(${element.imgUrl})`,
+                        }} />
+                        <div className='category-body-container'>
+                            <h2>{element.title}</h2>
+                            <p>{element.content}</p>
+                        </div>
+                    </CategorContainer>
 
-                    )}
+                )}
             </WhiteScreen>
         </Zoom>
     );
