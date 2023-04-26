@@ -19,7 +19,7 @@ function Message() {
                     <div class="masthead-content text-white">
                         <div class="container-flex px-4 px-lg-0">
                         <Slide left>
-                            <h1 class="fst-italic lh-1 mb-4">I am Developer and Designer</h1>
+                            <h1>I am Developer and Designer</h1>
                             <p class="mb-5" style={{ textAlign: "left" }}>I bring natural curiosity, fresh perspectives, years of experience, strategic insight, uncompromising quality, and a ridiculous love for what I do to each and every project.
                                 <br />
                                 <br />

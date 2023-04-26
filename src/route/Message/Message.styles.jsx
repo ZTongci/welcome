@@ -40,7 +40,7 @@ export const Masthead = styled.div`
         padding-bottom: 5rem;
         line-height: 150%;
     }
-    .masthead-content h1, .masthead .masthead-content .h1 {
+    .masthead-content h1, .h1 {
         font-size: 5.0rem;
         text-align: left;
         padding-top: 5rem;
@@ -54,13 +54,6 @@ export const Masthead = styled.div`
           }
       }
 
-      @media (min-width: 1200px) {
-        width: 75vw;
-        .masthead-content {
-            padding: 20px;
-            text-align: center;
-          }
-      }
 
       @media (min-width: 992px) {
         height: 100%;
@@ -74,16 +67,32 @@ export const Masthead = styled.div`
             transform-origin: top right;
         }
         .masthead-content {
-            padding-top: 0;
-            padding-bottom: 0;
+            padding-top: 0px;
+            padding-bottom: 0px;
             padding-right: 2rem;
           }
-        .masthead-content h1, .masthead .masthead-content .h1 {
+          .masthead-content h1, .h1 {
             font-size: 4.0rem;
         }
           p {
             font-size: 2.0rem;
           }
+        }
+        @media (min-width: 1200px) {
+          width: 75vw;
+          .masthead-content {
+              padding: 20px;
+              text-align: center;
+            }
+        }
+        @media (max-width: 992px) {
+          .masthead-content {
+            padding-top: 0px;
+          }
+          .masthead-content h1, .h1 {
+            font-size: 4.0rem;
+        }
+
         }
     
 `

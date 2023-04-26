@@ -39,9 +39,9 @@ export const CategorContainer = styled.div`
     margin: 0 35px 70px;
     overflow: hidden;
 
-    @media (max-width: 1326px) {
-      height: ${screenFullHeight}px;
-      ${({isPhone})=>!isPhone&&`width:${screenWeight(screenFullHeight)}px;min-width: 50%;`}
+    @media (max-width: 1350px) {
+      
+      ${({isPhone})=>!isPhone&&`width:${screenWeight(765)}px;min-width: 50%;height:765px;`}
     }
 
     .background-image {
@@ -50,7 +50,11 @@ export const CategorContainer = styled.div`
         background-size: cover;
         background-position: center;
       }
-      @media (max-width: 924px) {
+      @media (max-width: 1200px) {
+        ${({isPhone})=>!isPhone?`width:${screenWeight(570)}px;height: 570px;`:`width:${phoneWeight(450)}px;height: 450px;`}
+      }
+
+      @media (max-width: 900px) {
         ${({isPhone})=>!isPhone?`width:${screenWeight(400)}px;height: 400px;`:`width:${phoneWeight(450)}px;height: 450px;`}
       }
 
