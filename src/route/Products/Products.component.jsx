@@ -68,6 +68,11 @@ function Products() {
 
     useEffect(() => {
         window.addEventListener('resize', debounce(reportWindowSize,10));
+        if (window.innerWidth <= 1350) {
+            const resizeList = ProductsResourse.sort((first, second) => first.type - second.type
+            )
+            setProductslist(resizeList);
+        };
         return () => window.removeEventListener('resize', debounce(reportWindowSize,10));
     }, []);
     return (
@@ -76,9 +81,9 @@ function Products() {
                 SubTitleHandle="This is my Work example." />
 
             <WhiteScreen>
-                {Productslist.map(element =>
+                {Productslist.map((element,index) =>
 
-                    <CategorContainer isPhone={element.isPhone} isflex={element.flex}>
+                    <CategorContainer isPhone={element.isPhone} isflex={element.flex} key={index}>
                         <a className="background-image" href={element.link} style={{
                             backgroundImage: `url(${element.imgUrl})`,
                         }} />
