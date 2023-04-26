@@ -23,58 +23,61 @@ import BlackFridayIMG from "../../image/projects/project14.png";
 
 
 const ProductsResourse = [
-    { type: 3, imgUrl: SalaryIMG, isPhone: true, title: "SalaryApp", content: "FlutterApp", link: "" },
     { type: 1, imgUrl: EmotionIMG, isPhone: false, title: "Emotion", content: "Design", link: "" },
     { type: 1, imgUrl: VincentIMG, isPhone: false, title: "Vincent", content: "Design", link: "" },
-    { type: 3, imgUrl: FlashChatImg, isPhone: true, title: "FlashChat", content: "FlutterApp", link: "https://github.com/ZTongci/flutter_flash_chat_project" },
-    { type: 3, imgUrl: TwitterImg, isPhone: true, title: "Twitter", content: "FlutterApp", link: "https://github.com/ZTongci/flutter_twitter_project" },
     { type: 1, imgUrl: PhoneCallIMG, isPhone: false, title: "PhoneCallApp", content: "Design", link: "" },
-
-    { type: 1, imgUrl: MeettingIMG, isPhone: false, title: "MeettingApp", content: "Design", link: "" },
-    { type: 3, imgUrl: BMIImg, isPhone: true, title: "BMI", content: "FlutterApp", link: "https://github.com/ZTongci/flutter_bmi_calculator_project" },
-    { type: 3, imgUrl: ClimaImg, isPhone: true, title: "Weather", content: "FlutterApp", link: "https://github.com/ZTongci/flutter_clima_app_project" },
-    { type: 2, imgUrl: CrwnClothing, isPhone: false, title: "CrwnClothing", content: "ReactApp", link: "https://github.com/ZTongci/crwn-clothing-v2" },
-    { type: 1, imgUrl: TingDogImg, isPhone: false, title: "TinDog", content: "Design", link: "https://ztongci.github.io/TingDog/", flex: true },
     { type: 1, imgUrl: IcelandIMG, isPhone: false, title: "Iceland", content: "Design", link: "", flex: true },
     { type: 1, imgUrl: BeerIMG, isPhone: false, title: "Beer", content: "Design", link: "", flex: true },
     { type: 1, imgUrl: BlackFridayIMG, isPhone: false, title: "BlackFridaySell", content: "Design", link: "", flex: true },
+    { type: 1, imgUrl: TingDogImg, isPhone: false, title: "TinDog", content: "Design", link: "https://ztongci.github.io/TingDog/", flex: true },
+    { type: 1, imgUrl: MeettingIMG, isPhone: false, title: "MeettingApp", content: "Design", link: "" },
+
+    { type: 2, imgUrl: CrwnClothing, isPhone: false, title: "CrwnClothing", content: "ReactApp", link: "https://github.com/ZTongci/crwn-clothing-v2" },
+
+    { type: 3, imgUrl: SalaryIMG, isPhone: true, title: "SalaryApp", content: "FlutterApp", link: "" },
+    { type: 3, imgUrl: FlashChatImg, isPhone: true, title: "FlashChat", content: "FlutterApp", link: "https://github.com/ZTongci/flutter_flash_chat_project" },
+    { type: 3, imgUrl: TwitterImg, isPhone: true, title: "Twitter", content: "FlutterApp", link: "https://github.com/ZTongci/flutter_twitter_project" },
+
+    { type: 3, imgUrl: BMIImg, isPhone: true, title: "BMI", content: "FlutterApp", link: "https://github.com/ZTongci/flutter_bmi_calculator_project" },
+    { type: 3, imgUrl: ClimaImg, isPhone: true, title: "Weather", content: "FlutterApp", link: "https://github.com/ZTongci/flutter_clima_app_project" },
+
+
+
 ]
 
-const ProductsResourseInit = ProductsResourse.concat();
-ProductsResourse.sort((first, second) => first.type - second.type);
+// ProductsResourse.sort((first, second) => first.type - second.type);
 
 function Products() {
-    const [Productslist, setProductslist] = useState(ProductsResourse);
+    // const [Productslist, setProductslist] = useState(ProductsResourse);
 
-    function reportWindowSize() {
-        if (window.innerWidth <= 1350) {
-            const resizeList = ProductsResourse.sort((first, second) => first.type - second.type
-            )
-            setProductslist(resizeList);
-        }
-        else {
-            setProductslist(ProductsResourseInit);
-        }
-    };
+    // function reportWindowSize() {
+    //     if (window.innerWidth <= 1350) {
+    //         const resizeList = ProductsResourse.sort((first, second) => first.type - second.type
+    //         )
+    //         setProductslist(resizeList);
+    //     }
+    //     else {
+    //         setProductslist(ProductsResourseInit);
+    //     }
+    // };
 
-    // 防抖函数
-    function debounce(fn, wait) {
-        var timeout = null;
-        return function () {
-            if (timeout !== null)
-                clearTimeout(timeout);
-            timeout = setTimeout(fn, wait);
-        }
-    }
+    // // 防抖函数
+    // function debounce(fn, wait) {
+    //     var timeout = null;
+    //     return function () {
+    //         if (timeout !== null)
+    //             clearTimeout(timeout);
+    //     }
+    // }
 
 
-    useEffect(() => {
+    // useEffect(() => {
         
-        window.addEventListener('resize', debounce(reportWindowSize,1));
+    //     window.addEventListener('resize', debounce(reportWindowSize,1));
 
         
-        return () => window.removeEventListener('resize', debounce(reportWindowSize,1));
-    });
+    //     return () => window.removeEventListener('resize', debounce(reportWindowSize,1));
+    // });
 
     return (
         <Fragment>
@@ -84,7 +87,7 @@ function Products() {
             </Zoom>
             <WhiteScreen>
             
-                { window.innerWidth <= 1350?(Productslist.map((element,index) =>
+                { ProductsResourse.map((element,index) =>
                 <CategorContainer isPhone={element.isPhone} isflex={element.flex} key={index}>
                         <a className="background-image" href={element.link} style={{
                             backgroundImage: `url(${element.imgUrl})`,
@@ -98,21 +101,7 @@ function Products() {
                         </div>
                     </CategorContainer>
 
-                )):(ProductsResourseInit.map((element,index) =>
-                <CategorContainer isPhone={element.isPhone} isflex={element.flex} key={index}>
-                        <a className="background-image" href={element.link} style={{
-                            backgroundImage: `url(${element.imgUrl})`,
-                        }} />
-                        
-                        <div className='category-body-container'>
-                        <Fade>
-                            <h2>{element.title}</h2>
-                            <p>{element.content}</p>
-                            </Fade>
-                        </div>
-                    </CategorContainer>
-
-                ))}
+                )}
             
             </WhiteScreen>
 

@@ -1,6 +1,6 @@
 import styled from "styled-components"
 
-const screenFullHeight = 500;
+const screenFullHeight = 765;
 const screenWeight = (height)=>height*16/9;
 const phoneWeight = (height)=>height*9/16;
 
