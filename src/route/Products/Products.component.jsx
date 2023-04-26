@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useLayoutEffect } from "react";
 import Zoom from 'react-reveal/Zoom';
 
 import TitleSection from "../../components/TitleSection/TitleSection.component"
@@ -40,7 +40,7 @@ const ProductsResourse = [
 ]
 
 const ProductsResourseInit = ProductsResourse.concat();
-
+ProductsResourse.sort((first, second) => first.type - second.type);
 
 function Products() {
     const [Productslist, setProductslist] = useState(ProductsResourse);
@@ -66,15 +66,14 @@ function Products() {
         }
     }
 
+
     useEffect(() => {
+        
         window.addEventListener('resize', debounce(reportWindowSize,10));
-        if (window.innerWidth <= 1350) {
-            const resizeList = ProductsResourse.sort((first, second) => first.type - second.type
-            )
-            setProductslist(resizeList);
-        };
+
+        
         return () => window.removeEventListener('resize', debounce(reportWindowSize,10));
-    }, []);
+    });
     return (
         <Zoom>
             <TitleSection MainTitileHandle="Products"
