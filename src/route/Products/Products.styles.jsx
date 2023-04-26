@@ -30,7 +30,7 @@ export const CategorContainer = styled.div`
     min-width: 20%;
     height: ${screenFullHeight}px;
     ${({isPhone})=>isPhone?`width:${phoneWeight(screenFullHeight)}px;`:`width:${screenWeight(screenFullHeight)}px;`}
-    ${({isflex})=>isflex&& `min-width: 40%;height: 710px;width:${screenWeight(710)}px;`}
+    ${({isflex})=>isflex&& `min-width: 40%;height: 765px;width:${screenWeight(765)}px;`}
     display: flex;
     align-items: center;
     justify-content: center;
