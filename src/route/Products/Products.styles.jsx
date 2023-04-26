@@ -29,7 +29,7 @@ export const WhiteScreen = styled.div`
 export const CategorContainer = styled.div`
     min-width: 20%;
     height: ${screenFullHeight}px;
-    ${({isPhone})=>isPhone?`width:${phoneWeight(screenFullHeight)}px;`:`width:${screenWeight(screenFullHeight)}px;`}
+    ${({isPhone})=>isPhone?`width:${phoneWeight(screenFullHeight/1.4)}px;height: ${screenFullHeight/1.4}px;`:`width:${screenWeight(screenFullHeight)}px;`}
     ${({isflex})=>isflex&& `min-width: 40%;height: 765px;width:${screenWeight(765)}px;`}
     display: flex;
     align-items: center;
