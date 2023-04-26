@@ -17,3 +17,36 @@ export const Content = styled.div`
     margin-bottom: 150px;
     border-radius:30px;
 `
+
+export const PostPreView = styled.div`
+    a {
+        color: #212529;
+    }
+    a:hover {
+        text-decoration: none;
+        color: #0085A1;
+      }
+    .post-title {
+        font-size: 1.875rem;
+        margin-top: 1.875rem;
+        margin-bottom: 0.625rem;
+    }
+    .post-subtitle {
+        font-weight: 300;
+        margin-bottom: 0.625rem;
+      }
+    .post-meta {
+        font-size: 1.125rem;
+        font-style: italic;
+        margin-top: 0;
+        color: #6c757d;
+    }
+    .post-meta > a {
+        text-decoration: none;
+      }
+    @media (min-width: 992px) {
+        a > .post-title {
+            font-size: 2.25rem;
+        }
+    }
+`

@@ -88,15 +88,15 @@ function throttle(fn,delay){
 }
 
 // 防抖函数
-function debounce(fn, wait) {
-  var timeout = null;
-  return function() {
-      if(timeout !== null) 
-              clearTimeout(timeout);
-      timeout = setTimeout(fn, wait);
+function debounce(fn, delay) {
+  let timeout;
+  return function(){
+    clearTimeout(timeout)
+    timeout = setTimeout(()=>{
+      fn.apply(this, arguments)
+    },delay)
   }
 }
-
 
 
 
@@ -107,20 +107,20 @@ function debounce(fn, wait) {
     if (position >= 1) {
       console.log(position);
       // isAnimationed = true;
-      countNumberAnimation(100, "Design", 10);
-      countNumberAnimation(90, "Front", 10);
-      countNumberAnimation(75, "Backend", 10);
-      countNumberAnimation(5, "Happy", 10);
-      countNumberAnimation(10, "Projects", 10);
-      countNumberAnimation(2, "Experience", 10);
-      countNumberAnimation(4, "Advantage", 10);
+      countNumberAnimation(100, "Design", 2);
+      countNumberAnimation(90, "Front", 2);
+      countNumberAnimation(75, "Backend", 2);
+      countNumberAnimation(5, "Happy", 20);
+      countNumberAnimation(10, "Projects", 20);
+      countNumberAnimation(2, "Experience", 20);
+      countNumberAnimation(4, "Advantage", 20);
       
     }
   }
 
   useEffect(() => {
-    window.addEventListener("scroll", debounce(scrollHandle,1300));
-    // return () => document.removeEventListener("scroll", debounce(scrollHandle,4000));
+    window.addEventListener("scroll", debounce(scrollHandle,1000));
+    return () => document.removeEventListener("scroll", debounce(scrollHandle,1000));
   }, []);
 
 
