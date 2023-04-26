@@ -55,7 +55,7 @@ export const CategorContainer = styled.div`
       }
 
       @media (max-width: 680px) {
-        ${({isPhone})=>!isPhone?`width:${screenWeight(250)}px;height: 250px;`:`width:${phoneWeight(300)}px;height: 300px;`}
+        ${({isPhone})=>!isPhone?`width:${screenWeight(230)}px;height: 230px;`:`width:${phoneWeight(300)}px;height: 300px;`}
       }
   
     &:hover {

@@ -33,7 +33,7 @@ const ProductsResourse = [
     {imgUrl:BMIImg, isPhone:true, title:"BMI", content:"FlutterApp", link:"https://github.com/ZTongci/flutter_bmi_calculator_project"},
     {imgUrl:ClimaImg, isPhone:true, title:"Weather", content:"FlutterApp", link:"https://github.com/ZTongci/flutter_clima_app_project"},
     {imgUrl:CrwnClothing, isPhone:false, title:"CrwnClothing", content:"ReactApp", link:"https://github.com/ZTongci/crwn-clothing-v2"},
-    {imgUrl:TingDogImg, isPhone:false, title:"TinDog", content:"Website", link:"https://ztongci.github.io/TingDog/", flex:true},
+    {imgUrl:TingDogImg, isPhone:false, title:"TinDog", content:"Design", link:"https://ztongci.github.io/TingDog/", flex:true},
     {imgUrl:IcelandIMG, isPhone:false, title:"Iceland", content:"Design", link:"", flex:true},
     {imgUrl:BeerIMG, isPhone:false, title:"Beer", content:"Design", link:"", flex:true},
     {imgUrl:BlackFridayIMG, isPhone:false, title:"BlackFridaySell", content:"Design", link:"", flex:true},
