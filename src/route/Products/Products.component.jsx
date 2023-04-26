@@ -70,11 +70,12 @@ function Products() {
 
     useEffect(() => {
         
-        window.addEventListener('resize', debounce(reportWindowSize,10));
+        window.addEventListener('resize', debounce(reportWindowSize,1));
 
         
-        return () => window.removeEventListener('resize', debounce(reportWindowSize,10));
+        return () => window.removeEventListener('resize', debounce(reportWindowSize,1));
     });
+
     return (
         <Fragment>
             <Zoom>
@@ -83,19 +84,35 @@ function Products() {
             </Zoom>
             <WhiteScreen>
             
-                {Productslist.map((element,index) =>
-
-                    <CategorContainer isPhone={element.isPhone} isflex={element.flex} key={index}>
-                        <Fade><a className="background-image" href={element.link} style={{
+                { window.innerWidth <= 1350?(Productslist.map((element,index) =>
+                <CategorContainer isPhone={element.isPhone} isflex={element.flex} key={index}>
+                        <a className="background-image" href={element.link} style={{
                             backgroundImage: `url(${element.imgUrl})`,
-                        }} /></Fade>
+                        }} />
+                        
                         <div className='category-body-container'>
+                        <Fade>
                             <h2>{element.title}</h2>
                             <p>{element.content}</p>
+                            </Fade>
                         </div>
                     </CategorContainer>
 
-                )}
+                )):(ProductsResourseInit.map((element,index) =>
+                <CategorContainer isPhone={element.isPhone} isflex={element.flex} key={index}>
+                        <a className="background-image" href={element.link} style={{
+                            backgroundImage: `url(${element.imgUrl})`,
+                        }} />
+                        
+                        <div className='category-body-container'>
+                        <Fade>
+                            <h2>{element.title}</h2>
+                            <p>{element.content}</p>
+                            </Fade>
+                        </div>
+                    </CategorContainer>
+
+                ))}
             
             </WhiteScreen>
 
