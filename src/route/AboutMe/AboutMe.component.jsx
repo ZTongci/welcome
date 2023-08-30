@@ -11,6 +11,7 @@ import Resume from "../../components/Resume/Resume.component";
 import Zoom from 'react-reveal/Zoom';
 import Fade from 'react-reveal/Fade';
 import { useState, useEffect } from "react";
+import { useLocation } from "react-router-dom";
 
 function AboutMe() {
   var isAnimationed = false;
@@ -71,42 +72,11 @@ function AboutMe() {
     }, speed);
   }
 
-// 节流函数
-function throttle(fn,delay){
-  let valid = true
-  return function() {
-     if(!valid){
-         //休息时间 暂不接客
-         return false 
-     }
-     // 工作时间，执行函数并且在间隔期内把状态位设为无效
-      valid = false
-      setTimeout(() => {
-          fn()
-          valid = true;
-      }, delay)
-  }
-}
-
-// 防抖函数
-function debounce(fn, delay) {
-  let timeout;
-  return function(){
-    clearTimeout(timeout)
-    timeout = setTimeout(()=>{
-      fn.apply(this, arguments)
-    },delay)
-  }
-}
-
-
-
 
   const scrollHandle = (e) => {
     const scrollTop = () => Math.max(window.pageYOffset, document.documentElement.scrollTop, document.body.scrollTop);
     const position = scrollTop();
     if (position >= 1) {
-      console.log(position);
       // isAnimationed = true;
       countNumberAnimation(100, "Design", 2);
       countNumberAnimation(90, "Front", 2);
@@ -119,9 +89,13 @@ function debounce(fn, delay) {
     }
   }
 
-  useEffect(() => {
-    window.addEventListener("scroll", debounce(scrollHandle,1000));
-    return () => document.removeEventListener("scroll", debounce(scrollHandle,1000));
+
+
+  useEffect(
+    () => {
+        window.addEventListener("scrollend", scrollHandle);
+
+    return () => {window.removeEventListener("scrollend", scrollHandle);}
   }, []);
 
 

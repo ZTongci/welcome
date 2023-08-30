@@ -9,40 +9,35 @@ import Products from "./route/Products/Products.component";
 import Message from "./route/Message/Message.component";
 import Blog from "./route/Blog/Blog.component";
 import SplineBackround from "./components/Spline/Spline.component";
-
-
-import {Routes, Route } from "react-router-dom";
+import { Routes, Route} from "react-router-dom";
 
 
 
 function App() {
-  
-  const totalBackground = [<SplineBackround />, 
+  const totalBackground = [<SplineBackround />,
   <DynamicImage />
-];
+  ];
 
-  const randomBackground = ()=>{
+  const randomBackground = () => {
     const random = Math.floor(Math.random() * totalBackground.length);
     return totalBackground[random];
   };
 
-    return (<div>
-        {randomBackground()}
-        <Routes>
+  return (
+    <div>
+      {randomBackground()}
+      <Routes>
         <Route path={`/`} element={<Navbar />}>
           <Route index element={<Home />} />
           <Route path={`/contact`} element={<Contact />} />
           <Route path={`/aboutme`} element={<AboutMe />} />
           <Route path={`/products`} element={<Products />} />
-          <Route path={`/messages`} element={<Message/>} />
+          <Route path={`/messages`} element={<Message />} />
           <Route path={`/blog`} element={<Blog />} />
-          </Route>
+        </Route>
       </Routes>
-    
-
-        
     </div>
-    );
+  );
 }
 
 export default App;
