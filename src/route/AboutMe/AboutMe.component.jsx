@@ -42,7 +42,7 @@ function AboutMe() {
   const countNumberAnimation = (targetNum, name, speed) => {
     let currNum = 0;
     let interval = setInterval(function () {
-      currNum++;
+      
       switch (name) {
         case ("Design"):
           setDesignNumber(currNum);
@@ -66,7 +66,8 @@ function AboutMe() {
           setProjectsNumber(currNum);
           break;
       }
-      if (currNum === targetNum) {
+      currNum++;
+      if (currNum === targetNum + 1) {
         clearInterval(interval);
       }
     }, speed);
@@ -81,10 +82,10 @@ function AboutMe() {
       countNumberAnimation(100, "Design", 2);
       countNumberAnimation(90, "Front", 2);
       countNumberAnimation(75, "Backend", 2);
-      countNumberAnimation(5, "Happy", 100);
-      countNumberAnimation(10, "Projects", 50);
-      countNumberAnimation(2, "Experience", 250);
-      countNumberAnimation(4, "Advantage", 125);
+      countNumberAnimation(5, "Happy", 40);
+      countNumberAnimation(10, "Projects", 20);
+      countNumberAnimation(2, "Experience", 100);
+      countNumberAnimation(4, "Advantage", 50);
       
     }
   }
