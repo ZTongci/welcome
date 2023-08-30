@@ -81,10 +81,10 @@ function AboutMe() {
       countNumberAnimation(100, "Design", 2);
       countNumberAnimation(90, "Front", 2);
       countNumberAnimation(75, "Backend", 2);
-      countNumberAnimation(5, "Happy", 20);
-      countNumberAnimation(10, "Projects", 20);
-      countNumberAnimation(2, "Experience", 20);
-      countNumberAnimation(4, "Advantage", 20);
+      countNumberAnimation(5, "Happy", 100);
+      countNumberAnimation(10, "Projects", 50);
+      countNumberAnimation(2, "Experience", 100);
+      countNumberAnimation(4, "Advantage", 100);
       
     }
   }
