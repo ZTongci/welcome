@@ -94,8 +94,11 @@ function AboutMe() {
   useEffect(
     () => {
       window.addEventListener("scrollend", scrollHandle);
+      window.addEventListener("touchstart", scrollHandle);
 
-    return () => {window.removeEventListener("scrollend", scrollHandle);}
+    return () => {
+      window.removeEventListener("scrollend", scrollHandle);
+      window.removeEventListener("touchstart", scrollHandle);}
   }, []);
 
 
