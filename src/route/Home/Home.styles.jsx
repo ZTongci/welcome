@@ -1,5 +1,22 @@
-import styled from "styled-components";
+import styled, {keyframes} from "styled-components";
 
+const verticalMove = keyframes `
+from {
+    top: 45%;
+  }
+  to {
+    top: 47%;
+  }
+`
+
+const verticalSmallMove = keyframes `
+from {
+    top: 65%;
+  }
+  to {
+    top: 67%;
+  }
+`
 
 export const AllPage = styled.div`
     margin: 0 10%;
@@ -52,10 +69,27 @@ export const TitleContent = styled.h2`
 export const MyImage = styled.img`
     position: relative;
     z-index:100;
-    height: 35%;
-    margin-top: 10%;
+    height: 30%;
+    margin-top: 13%;
     @media (max-width: 1000px) {
         height: 400px;
         margin-top: 10%;
       }
     `
+
+export const CloudImage = styled.img`
+    position: absolute;
+    z-index:99;
+    top:45%;
+    height: 45%;
+    margin-top: 13%;
+    transform: translateY(-10%);
+    animation: 6s ease-in-out 0s infinite alternate none running ${verticalMove};
+    @media (max-width: 1000px) {
+        height: 400px;
+        margin-top: 10%;
+        top:65%;
+    animation: 6s ease-in-out 0s infinite alternate none running ${verticalSmallMove};
+        }
+
+`
