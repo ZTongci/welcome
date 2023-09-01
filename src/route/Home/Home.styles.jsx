@@ -72,7 +72,7 @@ export const MyImage = styled.img`
     height: 30%;
     margin-top: 13%;
     @media (max-width: 1000px) {
-        height: 400px;
+        height: 300px;
         margin-top: 10%;
       }
     `
@@ -80,15 +80,23 @@ export const MyImage = styled.img`
 export const CloudImage = styled.img`
     position: absolute;
     z-index:99;
-    top:45%;
-    height: 45%;
-    margin-top: 13%;
+    top:35%;
+    height: 55%;
+    margin-top: 11%;
     transform: translateY(-10%);
     animation: 6s ease-in-out 0s infinite alternate none running ${verticalMove};
     @media (max-width: 1000px) {
-        height: 400px;
-        margin-top: 10%;
+      height: 45%;
+      margin-top: 0%;
+      top:65%;
+  animation: 6s ease-in-out 0s infinite alternate none running ${verticalSmallMove};
+      }
+
+    @media (max-width: 500px) {
+        height: 30%;
+        margin-top: 35%;
         top:65%;
+        left:-40%;
     animation: 6s ease-in-out 0s infinite alternate none running ${verticalSmallMove};
         }
 
