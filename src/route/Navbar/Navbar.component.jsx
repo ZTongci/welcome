@@ -23,7 +23,6 @@ function Navbar() {
   const LinkStyle = (element)=>{
     const isActive = { color: "white", backgroundColor: "rgb(50,50,46)", } ;
     const notActive = { color: "#0000008C" };
-
     return element === Menu ? isActive : notActive;
   }
 
