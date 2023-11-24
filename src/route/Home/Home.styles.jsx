@@ -64,17 +64,38 @@ export const TitleContent = styled.h2`
     font-size: 40px;
     color: rgb(50,50,46,0.6);
     line-height: 100%;
+    @media (max-width: 1000px) {
+      margin-bottom: 60%;
+    }
+    @media (max-width: 800px) {
+      margin-bottom: 100%;
+    }
+    @media (max-width: 700px) {
+      margin-bottom: 110%;
+    }
+    @media (max-width: 630px) {
+      margin-bottom: 120%;
+    }
+    @media (max-width: 500px) {
+      margin-bottom: 100%;
+    }
 `
 
 export const MyImage = styled.img`
-    position: relative;
+    position: absolute;
     z-index:100;
-    height: 30%;
+    height: 40%;
     margin-top: 13%;
+    top:35%;
     @media (max-width: 1000px) {
-        height: 300px;
-        margin-top: 10%;
+        height: 35%;
+        top:40%;
       }
+    @media (max-width: 500px) {
+      height: 30%;
+      margin-top: 0%;
+      top:65%;
+    }
     `
 
 export const CloudImage = styled.img`
@@ -86,17 +107,17 @@ export const CloudImage = styled.img`
     transform: translateY(-10%);
     animation: 6s ease-in-out 0s infinite alternate none running ${verticalMove};
     @media (max-width: 1000px) {
-      height: 45%;
+      height: 35%;
+      top:30%;
       margin-top: 0%;
-      top:65%;
   animation: 6s ease-in-out 0s infinite alternate none running ${verticalSmallMove};
       }
 
     @media (max-width: 500px) {
         height: 30%;
-        margin-top: 35%;
-        top:65%;
-        left:-40%;
+        margin-top: 15%;
+        top:75%;
+        left:-30%;
     animation: 6s ease-in-out 0s infinite alternate none running ${verticalSmallMove};
         }
 

@@ -14,5 +14,5 @@ export const Content = styled.div`
     padding: 50px;
     font-family: "Lato", sans-serif;
     border-radius:30px;
-    margin:150px 200px;
+    margin:5% 10%;
 `

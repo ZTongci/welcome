@@ -23,12 +23,13 @@ function Home() {
                     <SubTitle>a programmer and designer.</SubTitle>
                     <TitleContent>I love what I do. Design isn’t just my job, it’s my life. My clients’ passion fuels my creativity, inspires my ideas, and drives me to pursue the extraordinary.</TitleContent>
                 </Zoom>
-                <CloudImage src={could} alt="Tcould-Image" />
                 <MyImage src={meImg} alt="TongCi-Image" />
-                
+                <CloudImage src={could} alt="Tcould-Image" />
             </HeroSection>
+            <div>
             {messageJson.map(
                 element => <MessageContent buttonLink={element.buttonLink} content={element.content} />)}
+            </div>
         </AllPage>
     );
 }
