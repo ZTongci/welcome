@@ -10,6 +10,7 @@ import Message from "./route/Message/Message.component";
 import Blog from "./route/Blog/Blog.component";
 import SplineBackround from "./components/Spline/Spline.component";
 import { Routes, Route} from "react-router-dom";
+import GiveMe from "./route/giveme/giveme.component";
 
 
 
@@ -34,6 +35,7 @@ function App() {
           <Route path={`/products`} element={<Products />} />
           <Route path={`/messages`} element={<Message />} />
           <Route path={`/blog`} element={<Blog />} />
+          <Route path={`/giveme`} element={<GiveMe />} />
         </Route>
       </Routes>
     </div>
