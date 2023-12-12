@@ -15,20 +15,18 @@ import { useLocation } from "react-router-dom";
 
 function AboutMe() {
   var isAnimationed = false;
-
   const [DesignNumber, setDesignNumber] = useState(0);
   const [FrontNumber, setFrontNumber] = useState(0);
   const [BackendNumber, setBackendNumber] = useState(0);
-
   const [HappyNumber, setHappyNumber] = useState(0);
   const [ProjectsNumber, setProjectsNumber] = useState(0);
   const [ExperienceNumber, setExperienceNumber] = useState(0);
   const [AdvantageNumber, setAdvantageNumber] = useState(0);
 
   const SkillDatas = [
-    { skillContent: `Design ${DesignNumber}%`, percentage: DesignNumber },
-    { skillContent: `Front develop ${FrontNumber}%`, percentage: FrontNumber },
-    { skillContent: `Backend develop ${BackendNumber}%`, percentage: BackendNumber }
+    { skillContent: `Design ${DesignNumber}%`, percentage: DesignNumber},
+    { skillContent: `Front develop ${FrontNumber}%`, percentage: FrontNumber},
+    { skillContent: `Backend develop ${BackendNumber}%`, percentage: BackendNumber}
   ];
 
   const ClientDatas = [
@@ -42,7 +40,6 @@ function AboutMe() {
   const countNumberAnimation = (targetNum, name, speed) => {
     let currNum = 0;
     let interval = setInterval(function () {
-      
       switch (name) {
         case ("Design"):
           setDesignNumber(currNum);
@@ -78,7 +75,6 @@ function AboutMe() {
     const scrollTop = () => Math.max(window.pageYOffset, document.documentElement.scrollTop, document.body.scrollTop);
     const position = scrollTop();
     if (position >= 1) {
-      // isAnimationed = true;
       countNumberAnimation(100, "Design", 2);
       countNumberAnimation(90, "Front", 2);
       countNumberAnimation(75, "Backend", 2);
@@ -86,10 +82,8 @@ function AboutMe() {
       countNumberAnimation(10, "Projects", 20);
       countNumberAnimation(2, "Experience", 100);
       countNumberAnimation(4, "Advantage", 50);
-      
     }
   }
-
 
 
   useEffect(

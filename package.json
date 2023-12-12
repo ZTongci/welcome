@@ -13,6 +13,9 @@
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "@types/react": "^18.2.43",
+    "@types/react-dom": "^18.2.17",
+    "@types/styled-components": "^5.1.34",
     "firebase": "^10.6.0",
     "jquery": "^3.6.4",
     "pathseg": "^1.2.1",
@@ -58,6 +61,8 @@
   },
   "devDependencies": {
     "@testing-library/dom": "^9.2.0",
+    "@typescript-eslint/eslint-plugin": "^6.14.0",
+    "@typescript-eslint/parser": "^6.14.0",
     "typescript": "^5.2.2"
   },
   "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",

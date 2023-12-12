@@ -35,14 +35,17 @@ export const SkillTotal = styled.div`
       }
       
 `
+type progressType = {
+  progress:string
+}
 
-export const ProgressBar = styled.div`
+export const ProgressBar = styled.div<progressType>`
     padding: 10px 0;
     margin: 0 0 6px 0;
     display: block;
     font-weight: 700;
     background-color: #ffb727;
-    ${(({progress})=>`width:${progress};`)}
+    ${(({progress}:progressType)=>`width:${progress};`)}
 `
 
 export const SkillContent = styled.p`

@@ -2,12 +2,16 @@ import { ContentCutSharp, ContentPasteGoSharp } from "@mui/icons-material";
 import {YellowArrow, ArrowTitle, ArrowContent, ArrowLi, ArrowUl, ArrowDiv} from "./ArrowMessage.style";
 
 
+type ArrowMessageType = {
+    title:string,
+    content:string
+}[][]
 
-const ArrowMesssges =[
+const ArrowMesssges:ArrowMessageType =[
     [
         {title: "Name:", content:"Tongci Zhang"},
         {title: "Website:", content:"ztongci.netlify.app"},
-        {title: "Phone:", content:"+81 090-9702-9795"},
+        {title: "Phone:", content:"+81 070-9209-3452"},
         {title: "City:", content:"Tokyo, JAPAN"},
     ],
     [
@@ -20,9 +24,6 @@ const ArrowMesssges =[
 
 
 const ArrowMessage = ()=>{
-
-
-
     return(<div className="row">{ArrowMesssges.map((ContentData,id)=>
     
     <ArrowDiv className="col-lg-6" key={`ArrowDiv ${id}`}>
