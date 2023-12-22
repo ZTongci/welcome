@@ -41,8 +41,6 @@ const ProductsResourse = [
     { type: 3, imgUrl: BMIImg, isPhone: true, title: "BMI", content: "FlutterApp", link: "https://github.com/ZTongci/flutter_bmi_calculator_project" },
     { type: 3, imgUrl: ClimaImg, isPhone: true, title: "Weather", content: "FlutterApp", link: "https://github.com/ZTongci/flutter_clima_app_project" },
 
-
-
 ]
 
 // ProductsResourse.sort((first, second) => first.type - second.type);

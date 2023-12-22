@@ -1,5 +1,9 @@
 import React from "react";
 import MessageContent from "../../components/MessageContent/MessageContent.component"
+import SummaryContent from "../../components/SummaryContent/SummaryContent.cmponent"
+import ButtonAnimationed from "../../components/ButtonAnimationed/ButtonAnimationed.component";
+import ChatAppIMG from "../../image/summary/chatapp.png";
+import TeamMockupIMG from "../../image/summary/TeamMockup.jpg";
 
 import MessageCotents from "./MessageContents.json"
 
@@ -8,7 +12,7 @@ import Pulse from 'react-reveal/Pulse';
 import { useEffect, useState } from "react";
 
 
-import { AllPage, HeroWrap, HeroSection, MainTitle, SubTitle, SubTitleAnimation1, SubTitleAnimation2, TitleContent, ButtonStyled, ButtonBorder,ScrollBlock,ScrollArrow,ScollText} from "./Home.styles"
+import { AllPage, HeroWrap, HeroSection, MainTitle, SubTitle, SubTitleAnimation1, SubTitleAnimation2, TitleContent, ButtonStyled, ButtonBorder,ScrollBlock,ScrollArrow,ScollText,SummaryWrap} from "./Home.styles"
 
 function Home() {
     const { messageJson } = MessageCotents;
@@ -50,7 +54,8 @@ function Home() {
                 <ScrollBlock>
                     <ScrollArrow/>
                     <ScollText>scoll</ScollText>
-                </ScrollBlock></HeroWrap>
+                </ScrollBlock>
+            </HeroWrap>
             <AllPage>
                 <HeroSection>
                     <Pulse>
@@ -62,17 +67,27 @@ function Home() {
                         <SubTitle>FullStack Developer and Designer.</SubTitle>
                         <TitleContent >I design and build beautiful websites for businesses around the globe. If you need a modern and powerful website, send me an email. If we are a good fit, I will give you a time and cost estimate.</TitleContent>
                     </Zoom>
-                    <ButtonStyled onClick={yellowChangeHandle}>see my work</ButtonStyled>
-                    <ButtonBorder />
+                    <ButtonAnimationed title={"see my work"}/>
+
 
                 </HeroSection>
+                
 
-
-                <div>
+                {/* <div>
             {messageJson.map(
                 element => <MessageContent buttonLink={element.buttonLink} content={element.content} />)}
-            </div>
+            </div> */}
+            
             </AllPage>
+            <SummaryWrap></SummaryWrap>
+            <SummaryContent firstTitle={"LATEST WORK"} secondTitle={"Team App website"}  
+            demonstration={"Full website design and build for a concept team collaboration platform. This website also includes a beautiful blog. I have built the website and the blog in Webflow which has one of the best CMS for blog hosting."}
+            projectImg={TeamMockupIMG}/>
+            <SummaryContent firstTitle={"LATEST WORK"} secondTitle={"Chat App website"}  
+            demonstration={"This is a homepage design and build for a concept project – a chat application. I have designed the page firstthen later built a responsive page in Webflow."}
+            projectImg={ChatAppIMG}/>
+            
+
         </div>
     );
 }

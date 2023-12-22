@@ -19,7 +19,6 @@ export const HeroWrap = styled.div`
     top:2.5%;
     left:1%;
     background-color: #f9efe7;
-
 `
 
 export const HeroSection = styled.div`
@@ -129,38 +128,7 @@ export const TitleContent = styled.h2`
 
 `
 
-export const ButtonStyled = styled.button`
-  width:250px;
-  height:50px;
-  margin-top:30px;
-  font-size:24px;
-  color:white;
-  background-color:rgb(50,50,46);
-  transition:all 0.1s;
-  border: none;
-  position:relative;
-  z-index:1;
-  &:hover {
-    transform: translate(8px, 8px);
-  }
-  @media (max-width: 500px) {
-      left:-4px;
-    }
-`
 
-
-export const ButtonBorder = styled.div`
-  width:248px;
-  height:48px;
-  box-shadow: 0 0 0 2px rgb(50,50,46,.9);
-  position:relative;
-  z-index:0;
-  top:-40px;
-  left:10px;
-  @media (max-width: 500px) {
-      left:4px;
-    }
-`
 
 export const ScrollBlock = styled.div`
     width: 46px;
@@ -214,4 +182,10 @@ export const ScrollArrow = styled.div`
     animation:${linerAnimation} 3s Linear 1s infinite;
 `
 
-
+export const SummaryWrap = styled.div`
+    height: 125vh;
+    width: 100%;
+    position:absolute;
+    top:110vh;
+    background-color: #fff;
+`
