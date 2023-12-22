@@ -41,6 +41,11 @@ export const MainTitle = styled.h1`
     font-weight: bold;
     position:relative;
     right:10px;
+    @media (max-width: 500px) {
+      font-size: 150%;
+      margin: -5% 0% 0% 0%;
+      left:-5px;
+    }
     @media (min-width: 2024px) {
       font-size: 700%;
     }
@@ -51,6 +56,11 @@ export const SubTitle = styled.h2`
     font-size: 70px;
     line-height: 80%;
     color: rgb(50,50,46);
+    @media (max-width: 500px) {
+      font-size: 34px;
+      position:relative;
+      left:-5px;
+    }
     @media (min-width: 2024px) {
       font-size: 70px;
     }
@@ -65,16 +75,24 @@ export const SubTitleAnimation1 = styled.div`
     left: 4%;
     right: 0%;
     ${(({progress})=>`width:${progress};`)}
+    @media (max-width: 500px) {
+      height: 10px;
+      width:86px;
+      left: -4px;
+      top: 10px;
+    }
+    
 `
 
 export const SubTitleAnimation2 = styled.div`
-    height: 20px;
+    height: 10px;
     background-color: #ffe872;
     margin-right: 4px;
     position: absolute;
     top: 20px;
     left: 500px;
     right: 0%;
+
     @media (max-width: 938px) {
       left: 4%;
       top:80px;
@@ -87,6 +105,12 @@ export const SubTitleAnimation2 = styled.div`
       left: 0px;
       top:130px;
       }
+      @media (max-width: 500px) {
+      height: 10px;
+      width:86px;
+      left: -4px;
+      top: 40px;
+    }
       ${(({progress})=>`width:${progress};`)}
 `
 
@@ -97,6 +121,11 @@ export const TitleContent = styled.h2`
     color: rgb(50,50,46,0.8);
     line-height: 100%;
     max-width:550px;
+    @media (max-width: 500px) {
+      font-size: 20px;
+      position:relative;
+      left:-5px;
+    }
 
 `
 
