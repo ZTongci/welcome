@@ -33,7 +33,7 @@ export const HeroSection = styled.div`
 `
 
 export const MainTitle = styled.h1`
-    margin: 10% 0% 0% 0%;
+    margin: 18% 0% 0% 0%;
     font-size: 550%;
     letter-spacing: 1px;
     font-family: 'Lemonada', cursive;
