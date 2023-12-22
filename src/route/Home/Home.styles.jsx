@@ -44,7 +44,7 @@ export const MainTitle = styled.h1`
     @media (max-width: 500px) {
       font-size: 150%;
       margin: -5% 0% 0% 0%;
-      left:-5px;
+      left:-4px;
     }
     @media (min-width: 2024px) {
       font-size: 700%;
@@ -59,7 +59,7 @@ export const SubTitle = styled.h2`
     @media (max-width: 500px) {
       font-size: 34px;
       position:relative;
-      left:-5px;
+      left:-4px;
     }
     @media (min-width: 2024px) {
       font-size: 70px;
@@ -78,7 +78,7 @@ export const SubTitleAnimation1 = styled.div`
     @media (max-width: 500px) {
       height: 10px;
       width:86px;
-      left: -4px;
+      left: -2px;
       top: 10px;
     }
     
@@ -108,7 +108,7 @@ export const SubTitleAnimation2 = styled.div`
       @media (max-width: 500px) {
       height: 10px;
       width:86px;
-      left: -4px;
+      left: -2px;
       top: 40px;
     }
       ${(({progress})=>`width:${progress};`)}
@@ -124,7 +124,7 @@ export const TitleContent = styled.h2`
     @media (max-width: 500px) {
       font-size: 20px;
       position:relative;
-      left:-5px;
+      left:-4px;
     }
 
 `
@@ -143,6 +143,9 @@ export const ButtonStyled = styled.button`
   &:hover {
     transform: translate(8px, 8px);
   }
+  @media (max-width: 500px) {
+      left:-4px;
+    }
 `
 
 
@@ -166,6 +169,10 @@ export const ScrollBlock = styled.div`
     overflow: hidden;
     transform: scale(1.3);
     z-index:1;
+    @media (max-width: 500px) {
+      bottom: -85%;
+      transform: scale(.8);
+    }
 `
 
 
@@ -186,6 +193,7 @@ export const ScollText = styled.div`
 const linerAnimation = keyframes`
   0%,100% {height: 2px;}
   50% {height: 105px;}
+
 `;
 
 
