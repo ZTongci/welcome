@@ -85,7 +85,7 @@ export const SubTitleAnimation1 = styled.div`
 `
 
 export const SubTitleAnimation2 = styled.div`
-    height: 10px;
+    height: 20px;
     background-color: #ffe872;
     margin-right: 4px;
     position: absolute;
