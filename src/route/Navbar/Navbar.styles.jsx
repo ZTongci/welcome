@@ -32,7 +32,8 @@ export const NavBarTotal = styled.nav`
         width:900px;
       }
     @media (max-width: 1000px) {
-    width:400px;
+        margin-top: 12%;
+        width:350px;
     }
 `
 
@@ -45,7 +46,7 @@ export const NavBarRow = styled.nav`
         width:900px;
       }
     @media (max-width: 1000px) {
-    width:400px;
+        width:350px;
     }
 
 `

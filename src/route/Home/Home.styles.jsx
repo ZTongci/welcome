@@ -7,7 +7,7 @@ export const AllPage = styled.div`
         width:900px;
       }
     @media (max-width: 1000px) {
-      width:380px;
+      width:350px;
     }
 
 `

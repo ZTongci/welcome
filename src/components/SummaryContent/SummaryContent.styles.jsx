@@ -10,8 +10,8 @@ export const Box = styled.div`
         width:900px;
       }
     @media (max-width: 1000px) {
-    width:400px;
-    margin-bottom: 500px;
+        width:350px;
+        margin-bottom: 500px;
     }
 `
 
@@ -27,7 +27,7 @@ export const Group = styled.div`
         width:900px;
       }
     @media (max-width: 1000px) {
-        width:400px;
+        width:350px;
     }
 `
 
@@ -116,7 +116,7 @@ export const OverlapGroup = styled.div`
 `
 
 
-  
+
 export const TextWrapper = styled.div`
     color: #ffffff;
     font-family: "Nunito Sans", Helvetica;
@@ -128,7 +128,7 @@ export const TextWrapper = styled.div`
     position: absolute;
     text-align: center;
     top: 16px;
-`  
+`
 
 export const OverlapWrapper = styled.div`
     height: 28px;
@@ -136,15 +136,15 @@ export const OverlapWrapper = styled.div`
     position: absolute;
     top: 167px;
     width: 73px;
-`  
+`
 
 export const ConceptWrapper = styled.div`
     background-color: #f9efe7;
     height: 28px;
     position: relative;
     width: 71px;
-`  
-  
+`
+
 export const ConceptDiv = styled.div`
     color: var(--text-color);
     font-family: "Muli-Bold", Helvetica;
@@ -155,22 +155,22 @@ export const ConceptDiv = styled.div`
     line-height: normal;
     position: absolute;
     top: 6px;
-`  
+`
 export const OverlapGroupWrapper = styled.div`
     height: 28px;
     left: 134px;
     position: absolute;
     top: 167px;
     width: 164px;
-`  
-  
+`
+
 
 export const WebflowDevelopmentWrappe = styled.div`
     background-color: #f9efe7;
     height: 28px;
     position: relative;
     width: 162px;
-`  
+`
 
 export const Group2 = styled.div`
     height: 28px;
@@ -178,15 +178,15 @@ export const Group2 = styled.div`
     position: absolute;
     top: 167px;
     width: 120px;
-`  
+`
 
 export const WebsiteDesignWrapper = styled.div`
     background-color: #f9efe7;
     height: 28px;
     position: relative;
     width: 118px;
-`  
-  
+`
+
 export const Discribe = styled.p`
     color: var(--text-color);
     font-family: var(--paragraph-font-family);
@@ -202,10 +202,10 @@ export const Discribe = styled.p`
     text-align:left;
     @media (max-width: 1000px) {
         font-size: 24px;
-        width:420px;
+        width:400px;
         margin-top: 350px;
     }
-`    
+`
 
 export const TextWrapper2 = styled.div`
     color: var(--text-color);
@@ -224,10 +224,10 @@ export const TextWrapper2 = styled.div`
         width:900px;
       }
     @media (max-width: 1000px) {
-        font-size: 400%;
+        font-size: 350%;
         left: 0px;
     }
-`  
+`
 
 export const LatestWork = styled.div`
     color: #b7b4b9;
