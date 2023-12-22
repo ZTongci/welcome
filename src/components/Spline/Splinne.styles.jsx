@@ -2,9 +2,10 @@ import styled, {css} from "styled-components";
 import Spline from '@splinetool/react-spline';
 
 export const DodoSpline = styled(Spline)`
-    height: 100px;
+    height: 100vh;
     position: fixed;
     z-index: -99;
+    right:0%;
 
     ${({UrlBackground})=>UrlBackground&&DodoSplineAfter}
 

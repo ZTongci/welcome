@@ -226,6 +226,7 @@ export const TextWrapper2 = styled.div`
     @media (max-width: 1000px) {
         font-size: 350%;
         left: 0px;
+        width:380px;
     }
 `
 

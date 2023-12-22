@@ -179,4 +179,8 @@ export const SummaryWrap = styled.div`
     position:absolute;
     top:110vh;
     background-color: #fff;
+    @media (max-width: 1000px) {
+      height: 260vh;
+      margin-bottom: 5%;
+    }
 `
