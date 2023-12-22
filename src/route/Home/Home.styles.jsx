@@ -157,6 +157,9 @@ export const ButtonBorder = styled.div`
   z-index:0;
   top:-40px;
   left:10px;
+  @media (max-width: 500px) {
+      left:4px;
+    }
 `
 
 export const ScrollBlock = styled.div`
