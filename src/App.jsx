@@ -25,8 +25,8 @@ function App() {
   };
 
   return (
-    <div>
-      {randomBackground()}
+    <div style={{display:"flex",flexFlow:"column",alignItems:"center"}}>
+      {/* {randomBackground()} */}
       <Routes>
         <Route path={`/`} element={<Navbar />}>
           <Route index element={<Home />} />

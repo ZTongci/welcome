@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Fragment } from "react";
 import MessageContent from "../../components/MessageContent/MessageContent.component"
 import SummaryContent from "../../components/SummaryContent/SummaryContent.cmponent"
 import ButtonAnimationed from "../../components/ButtonAnimationed/ButtonAnimationed.component";
@@ -49,7 +49,7 @@ function Home() {
 
 
     return (
-        <div>
+        <Fragment>
             <HeroWrap>                    
                 <ScrollBlock>
                     <ScrollArrow/>
@@ -68,16 +68,11 @@ function Home() {
                         <TitleContent >I design and build beautiful websites for businesses around the globe. If you need a modern and powerful website, send me an email. If we are a good fit, I will give you a time and cost estimate.</TitleContent>
                     </Zoom>
                     <ButtonAnimationed title={"see my work"}/>
-
-
                 </HeroSection>
-                
-
                 {/* <div>
             {messageJson.map(
                 element => <MessageContent buttonLink={element.buttonLink} content={element.content} />)}
             </div> */}
-            
             </AllPage>
             <SummaryWrap></SummaryWrap>
             <SummaryContent firstTitle={"LATEST WORK"} secondTitle={"Team App website"}  
@@ -86,9 +81,7 @@ function Home() {
             <SummaryContent firstTitle={"LATEST WORK"} secondTitle={"Chat App website"}  
             demonstration={"This is a homepage design and build for a concept project – a chat application. I have designed the page firstthen later built a responsive page in Webflow."}
             projectImg={ChatAppIMG}/>
-            
-
-        </div>
+        </Fragment>
     );
 }
 

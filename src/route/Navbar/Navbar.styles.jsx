@@ -23,20 +23,30 @@ export const NavLabelToggle = styled(NavLabelLink)`
 
 
 export const NavBarTotal = styled.nav`
-    opacity: 0.95;
+    margin-top: 5%;
     position: relative;
     z-index:100;
-    font-size: 30px;
-    text-align: center;
     --bs-dropdown-link-active-bg: black;
-    padding: 72px 240px;
-    @media (max-width: 1200px) {
-        padding: 72px 120px;
+    width:1280px;
+    @media (max-width: 1316px) {
+        width:900px;
       }
-    @media (max-width: 750px) {
-        padding: 72px 60px;
+    @media (max-width: 1000px) {
+    width:400px;
     }
+`
 
+export const NavBarRow = styled.nav`
+    font-size: 30px;
+    display:flex;
+    width:1280px;
+    justify-content:space-between;
+    @media (max-width: 1316px) {
+        width:900px;
+      }
+    @media (max-width: 1000px) {
+    width:400px;
+    }
 
 `
 

@@ -2,14 +2,14 @@ import styled ,{keyframes} from "styled-components";
 
 
 export const AllPage = styled.div`
-    margin: 0 240px;
-    
-    @media (max-width: 1200px) {
-      margin: 0 120px;
+    width:1280px;
+    @media (max-width: 1316px) {
+        width:900px;
       }
-    @media (max-width: 750px) {
-    margin: 0 60px;
+    @media (max-width: 1000px) {
+    width:400px;
     }
+
 `
 
 export const HeroWrap = styled.div`
@@ -27,12 +27,14 @@ export const HeroSection = styled.div`
     flex-direction: column;
     align-items: flex-start;
     position:relative;
-    left:15px;
+    left:0px;
     text-align:left;
+    margin-left: 0;
+    margin-right: auto;
 `
 
 export const MainTitle = styled.h1`
-    margin: 18% 0% 0% 0%;
+    margin: 18% auto 0% auto;
     font-size: 550%;
     letter-spacing: 1px;
     font-family: 'Lemonada', cursive;
@@ -41,12 +43,8 @@ export const MainTitle = styled.h1`
     position:relative;
     right:10px;
     @media (max-width: 500px) {
-      font-size: 150%;
-      margin: -5% 0% 0% 0%;
-      left:-4px;
-    }
-    @media (min-width: 2024px) {
-      font-size: 700%;
+      font-size: 200%;
+      right:5px;
     }
 `
 
@@ -92,23 +90,15 @@ export const SubTitleAnimation2 = styled.div`
     left: 500px;
     right: 0%;
 
-    @media (max-width: 938px) {
-      left: 4%;
-      top:80px;
-      }
-      @media (max-width: 616px) {
+    @media (max-width: 1000px) {
       left: 90px;
       top:80px;
-      }
-      @media (max-width: 528px) {
-      left: 0px;
-      top:130px;
       }
       @media (max-width: 500px) {
       height: 10px;
       width:86px;
-      left: -2px;
-      top: 40px;
+      left: 240px;
+      top: 10px;
     }
       ${(({progress})=>`width:${progress};`)}
 `
@@ -183,7 +173,8 @@ export const ScrollArrow = styled.div`
 `
 
 export const SummaryWrap = styled.div`
-    height: 125vh;
+    right:0px;
+    height: 120vh;
     width: 100%;
     position:absolute;
     top:110vh;

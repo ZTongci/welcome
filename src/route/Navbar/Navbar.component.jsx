@@ -7,6 +7,7 @@ import Footer from "../../components/Footer/Footer.component";
 import {
   NavLabelLink,
   NavBarTotal,
+  NavBarRow,
   Welcome,
   NavLabelToggle,
   NavLabel,
@@ -38,7 +39,7 @@ function Navbar() {
   return (
     <Fragment>
       <NavBarTotal className="navbar">
-        <div className="container-fluid">
+        <NavBarRow >
           <Fade>
             <Link className="navbar-brand" to="/" >
               <NavLabel>Tongci.</NavLabel>
@@ -94,7 +95,7 @@ function Navbar() {
             </div>
           </div>
           </Fragment>}
-        </div>
+        </NavBarRow>
         
       </NavBarTotal>
       <Outlet />
