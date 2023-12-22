@@ -16,7 +16,7 @@ import GiveMe from "./route/giveme/giveme.component";
 
 function App() {
   const totalBackground = [<SplineBackround />,
-  <DynamicImage />
+  // <DynamicImage />
   ];
 
   const randomBackground = () => {

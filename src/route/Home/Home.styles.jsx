@@ -43,7 +43,7 @@ export const MainTitle = styled.h1`
     position:relative;
     right:10px;
     @media (max-width: 500px) {
-      font-size: 200%;
+      font-size: 180%;
       right:5px;
     }
 `
