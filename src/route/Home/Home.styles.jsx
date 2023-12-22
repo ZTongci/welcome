@@ -1,131 +1,177 @@
-import styled, {keyframes} from "styled-components";
+import styled ,{keyframes} from "styled-components";
 
-const verticalMove = keyframes `
-from {
-    top: 45%;
-  }
-  to {
-    top: 47%;
-  }
-`
-
-const verticalSmallMove = keyframes `
-from {
-    top: 65%;
-  }
-  to {
-    top: 67%;
-  }
-`
 
 export const AllPage = styled.div`
-    margin: 0 10%;
-    text-align: center;
+    margin: 0 240px;
+    
+    @media (max-width: 1200px) {
+      margin: 0 120px;
+      }
+    @media (max-width: 750px) {
+    margin: 0 60px;
+    }
+`
+
+export const HeroWrap = styled.div`
+    height: 100vh;
+    width: 98%;
+    position:absolute;
+    top:2.5%;
+    left:1%;
+    background-color: #f9efe7;
+
 `
 
 export const HeroSection = styled.div`
-    height: 140vh;
+    height: 100vh;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    @media (max-width: 1000px) {
-        transform: scale(0.9);
-        height: 100%;
-      }
-
+    align-items: flex-start;
+    position:relative;
+    left:15px;
+    text-align:left;
 `
 
 export const MainTitle = styled.h1`
-    margin: 30% 0% 0% 0%;
-    font-size: 400%;
+    margin: 10% 0% 0% 0%;
+    font-size: 550%;
     letter-spacing: 1px;
     font-family: 'Lemonada', cursive;
-    color: rgb(50,50,46,.9);
+    color: rgb(50,50,46);
     font-weight: bold;
-
-    @media (max-width: 1000px) {
-        margin: 20% 0% 2% 0%;
-      }
+    position:relative;
+    right:10px;
+    @media (min-width: 2024px) {
+      font-size: 700%;
+    }
 `
 
 export const SubTitle = styled.h2`
     margin-bottom: 5%;
     font-size: 70px;
     line-height: 80%;
-    color: rgb(50,50,46,.8);
+    color: rgb(50,50,46);
+    @media (min-width: 2024px) {
+      font-size: 70px;
+    }
+`
 
-    @media (max-width: 1000px) {
-        margin: 0% 0% 7% 0%;
+export const SubTitleAnimation1 = styled.div`
+    height: 20px;
+    background-color: #ffe872;
+    margin-right: 4px;
+    position: absolute;
+    top: 20px;
+    left: 4%;
+    right: 0%;
+    ${(({progress})=>`width:${progress};`)}
+`
+
+export const SubTitleAnimation2 = styled.div`
+    height: 20px;
+    background-color: #ffe872;
+    margin-right: 4px;
+    position: absolute;
+    top: 20px;
+    left: 500px;
+    right: 0%;
+    @media (max-width: 938px) {
+      left: 4%;
+      top:80px;
       }
+      @media (max-width: 616px) {
+      left: 90px;
+      top:80px;
+      }
+      @media (max-width: 528px) {
+      left: 0px;
+      top:130px;
+      }
+      ${(({progress})=>`width:${progress};`)}
 `
 
 
 export const TitleContent = styled.h2`
-    font-size: 40px;
-    color: rgb(50,50,46,0.6);
+    text-align:left;
+    font-size: 30px;
+    color: rgb(50,50,46,0.8);
     line-height: 100%;
-    @media (max-width: 1000px) {
-      margin-bottom: 60%;
-    }
-    @media (max-width: 800px) {
-      margin-bottom: 100%;
-    }
-    @media (max-width: 700px) {
-      margin-bottom: 110%;
-    }
-    @media (max-width: 630px) {
-      margin-bottom: 120%;
-    }
-    @media (max-width: 500px) {
-      margin-bottom: 100%;
-    }
-`
-
-export const MyImage = styled.img`
-    position: absolute;
-    z-index:100;
-    height: 40%;
-    margin-top: 13%;
-    top:35%;
-    @media (max-height: 700px) {
-      height: 50%;
-      margin-top: 30%;
-      }
-    @media (max-width: 1000px) {
-        height: 35%;
-        top:40%;
-      }
-    @media (max-width: 500px) {
-      height: 30%;
-      margin-top: 0%;
-      top:65%;
-    }
-    `
-
-export const CloudImage = styled.img`
-    position: absolute;
-    z-index:99;
-    top:35%;
-    height: 55%;
-    margin-top: 11%;
-    transform: translateY(-10%);
-    animation: 6s ease-in-out 0s infinite alternate none running ${verticalMove};
-    @media (max-height: 700px) {
-      margin-top: 18%;
-      height: 80%;
-      }
-    @media (max-width: 1000px) {
-      height: 35%;
-      top:30%;
-      margin-top: 0%;
-  animation: 6s ease-in-out 0s infinite alternate none running ${verticalSmallMove};
-      }
-    @media (max-width: 500px) {
-      height: 30%;
-      margin-top: 15%;
-      top:75%;
-      left:-30%;
-  animation: 6s ease-in-out 0s infinite alternate none running ${verticalSmallMove};
-      }
+    max-width:550px;
 
 `
+
+export const ButtonStyled = styled.button`
+  width:250px;
+  height:50px;
+  margin-top:30px;
+  font-size:24px;
+  color:white;
+  background-color:rgb(50,50,46);
+  transition:all 0.1s;
+  border: none;
+  position:relative;
+  z-index:1;
+  &:hover {
+    transform: translate(8px, 8px);
+  }
+`
+
+
+export const ButtonBorder = styled.div`
+  width:248px;
+  height:48px;
+  box-shadow: 0 0 0 2px rgb(50,50,46,.9);
+  position:relative;
+  z-index:0;
+  top:-40px;
+  left:10px;
+`
+
+export const ScrollBlock = styled.div`
+    width: 46px;
+    height: 105px;
+    display: inline-block;
+    position: relative;
+    bottom: -90%;
+    left: 40%;
+    overflow: hidden;
+    transform: scale(1.3);
+    z-index:1;
+`
+
+
+export const ScollText = styled.div`
+    transform-origin: 0 0;
+    text-transform: uppercase;
+    font-weight: lighter;
+    display: inline-block;
+    position: absolute;
+    top: 0%;
+    bottom: auto;
+    left: 46px;
+    right: auto;
+    transform: rotate(90deg);
+    font-size:26px;
+`
+
+const linerAnimation = keyframes`
+  0%,100% {height: 2px;}
+  50% {height: 105px;}
+`;
+
+
+export const ScrollArrow = styled.div`
+    width: 1px;
+    height: 105px;
+    transform-origin: 50% 100%;
+    background-color: #000;
+    display: inline-block;
+    position: absolute;
+    top: 0%;
+    bottom: auto;
+    left: 0%;
+    right: auto;
+    animation:${linerAnimation} 3s Linear 1s infinite;
+`
+
+

@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useEffect, useState} from "react";
 import { Link, Outlet } from "react-router-dom";
 import meLogo from "../../image/me-logo.png";
 import Fade from 'react-reveal/Fade';
@@ -9,7 +9,8 @@ import {
   NavBarTotal,
   Welcome,
   NavLabelToggle,
-  NavLabel} from "./Navbar.styles";
+  NavLabel,
+  NavLink} from "./Navbar.styles";
 
 
 function Navbar() {
@@ -19,23 +20,44 @@ function Navbar() {
   function chaneColor(clickMenu) {
     setMenu(clickMenu);
   }
-
   const LinkStyle = (element)=>{
     const isActive = { color: "white", backgroundColor: "rgb(50,50,46)", } ;
     const notActive = { color: "#0000008C" };
     return element === Menu ? isActive : notActive;
   }
 
+  // nav自动化
+  const [windowSize, setWindowSize] = useState(window.innerWidth);
+  useEffect(()=>{
+    window.addEventListener("resize", ()=>{
+      setWindowSize(window.innerWidth)
+    });
+  },[window.innerWidth])
+
+
   return (
     <Fragment>
-      <NavBarTotal className="navbar bg-light">
+      <NavBarTotal className="navbar">
         <div className="container-fluid">
           <Fade>
             <Link className="navbar-brand" to="/" >
-              {/* <img src={meLogo} alt="" srcset="" className="me-logo" /> */}
-              <NavLabel>Tongci</NavLabel>
+              <NavLabel>Tongci.</NavLabel>
               </Link>
           </Fade>
+{         windowSize >= 1000 ? 
+          <div>
+                    <NavLink to="/aboutme">About Me</NavLink>
+                    <NavLink to="/products">Product</NavLink>
+                    <NavLink to="/messages">Message</NavLink>
+                    <NavLink to="/contact">Contact</NavLink>
+          </div>: 
+          
+
+
+
+
+
+          <Fragment>
           <button className="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
             <span className="navbar-toggler-icon"></span>
           </button>
@@ -71,7 +93,9 @@ function Navbar() {
               </ul>
             </div>
           </div>
+          </Fragment>}
         </div>
+        
       </NavBarTotal>
       <Outlet />
       <Footer />

@@ -7,6 +7,8 @@ export const MainTitle = styled.h1`
     font-weight: bold;
     margin: 5% 0% 2% 0%;
     line-height:50%;
+    text-align:center;
+
    
     @media (max-width: 1000px) {
         margin: 20% 0% 2% 0%;
@@ -18,6 +20,7 @@ export const SubTitle = styled.h2`
     font-size: 50px;
     line-height: 80%;
     margin: 0 10% 10%;
+    text-align:center;
     @media (max-width: 1000px) {
         margin: 0% 10% 7%;
     }
