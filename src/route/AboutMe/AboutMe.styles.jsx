@@ -14,6 +14,7 @@ export const WhiteScreen = styled.div`
     padding: 0px;
     margin-bottom: 150px;
     border-radius:30px;
+    width:100vw;
 
     @media (max-width: 1200px) {
       padding:50px 0px;

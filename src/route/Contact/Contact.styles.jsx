@@ -26,4 +26,8 @@ export const WhiteScreen = styled.div`
     a{
         font-size:25px;
     }
+    width:900px;
+    @media (max-width: 1000px) {
+        width:450px;
+    }
 `

@@ -35,20 +35,7 @@ const Contact = ()=>{
     return (
         <Zoom>
         <TitleSection  MainTitileHandle="Contact" SubTitleHandle={`Want to get in touch? Or give me some feedback? Fill out the form below to send me a message!`}/>
-
-        <main class="mb-4">
-            <div class="container-flex px-4 px-lg-5">
-                <div class="row gx-4 gx-lg-5 justify-content-center">
-                    <div class="col-md-10 col-lg-8 col-xl-7" >
-                        {/* <p>Want to get in touch? Fill out the form below to send me a message and I will get back to you as soon as possible!</p> */}
-                        <WhiteScreen class="my-5">
-                            {/* <!-- * * * * * * * * * * * * * * *-->
-                            <!-- * * SB Forms Contact Form * *-->
-                            <!-- * * * * * * * * * * * * * * *-->
-                            <!-- This form is pre-integrated with SB Forms.-->
-                            <!-- To make this form functional, sign up at-->
-                            <!-- https://startbootstrap.com/solution/contact-forms-->
-                            <!-- to get an API token!--> */}
+                        <WhiteScreen>
                             <div id="contactForm" data-sb-form-api-token="API_TOKEN">
                                 <div class="form-floating">
                                     <input class="form-control" id="name" type="text" placeholder="Enter your name..." data-sb-validations="required" onChange={(e)=>{setNameSended(e.target.value)}}/>
@@ -107,10 +94,6 @@ const Contact = ()=>{
 
                             </div>
                         </WhiteScreen>
-                    </div>
-                </div>
-            </div>
-        </main>
         </Zoom>
     );
 }

@@ -81,8 +81,9 @@ export const Masthead = styled.div`
         }
         @media (min-width: 1200px) {
           width: 75vw;
+          right:15vw;
           .masthead-content {
-              padding: 20px;
+              padding: 15px;
               text-align: center;
             }
         }

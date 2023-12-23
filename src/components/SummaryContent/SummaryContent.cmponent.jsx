@@ -6,7 +6,7 @@ import { Box, Group, LeftContent,RightContent,IcArrowForward,HintMessage,Overlap
 import { Fragment, useState } from "react";
 import ChatAppIMG from "../../image/summary/chatapp.png";
 
-const SummaryContent = ({firstTitle,secondTitle,demonstration,projectImg})=>{
+const SummaryContent = ({firstTitle,secondTitle,demonstration,projectImg, tech})=>{
   const [isHoverImage, setIsHoverImage] = useState(false);
   
 
@@ -42,7 +42,7 @@ const SummaryContent = ({firstTitle,secondTitle,demonstration,projectImg})=>{
         </OverlapWrapper>
         <OverlapGroupWrapper >
           <WebflowDevelopmentWrappe>
-            <ConceptDiv>Webflow Development</ConceptDiv>
+            <ConceptDiv>{tech ? tech : "Webflow Development"}</ConceptDiv>
           </WebflowDevelopmentWrappe>
         </OverlapGroupWrapper >
         <Group2>

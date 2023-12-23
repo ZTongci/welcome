@@ -71,6 +71,7 @@ export const SubTitleAnimation1 = styled.div`
     top: 20px;
     left: 4%;
     right: 0%;
+    width:0;
     ${(({progress})=>`width:${progress};`)}
     @media (max-width: 500px) {
       height: 10px;
@@ -89,6 +90,7 @@ export const SubTitleAnimation2 = styled.div`
     top: 20px;
     left: 500px;
     right: 0%;
+    width:0;
 
     @media (max-width: 1000px) {
       left: 90px;
@@ -174,13 +176,13 @@ export const ScrollArrow = styled.div`
 
 export const SummaryWrap = styled.div`
     right:0px;
-    height: 120vh;
+    height: 400vh;
     width: 100%;
     position:absolute;
     top:110vh;
     background-color: #fff;
     @media (max-width: 1000px) {
-      height: 300vh;
+      height: 380vh;
       margin-bottom: 5%;
     }
 `

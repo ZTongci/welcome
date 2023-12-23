@@ -2,8 +2,11 @@ import React, { Fragment } from "react";
 import MessageContent from "../../components/MessageContent/MessageContent.component"
 import SummaryContent from "../../components/SummaryContent/SummaryContent.cmponent"
 import ButtonAnimationed from "../../components/ButtonAnimationed/ButtonAnimationed.component";
+import WhatDo from "../../components/WhatDo/WhatDo.component";
+
 import ChatAppIMG from "../../image/summary/chatapp.png";
 import TeamMockupIMG from "../../image/summary/TeamMockup.jpg";
+import YouTouchIMG from "../../image/summary/youtouchHome.png";
 
 import MessageCotents from "./MessageContents.json"
 
@@ -19,7 +22,7 @@ function Home() {
 
     // ---------------标题黄条动画---------------
     const [progressNumber, setProgressNumber] = useState(0);
-    const yellowChangeHandle = (e) => {
+    const yellowChangeHandle = () => {
         const scrollTop = () => Math.max(window.pageYOffset, document.documentElement.scrollTop, document.body.scrollTop);
         const position = scrollTop();
         if (position >= 0) {
@@ -38,15 +41,12 @@ function Home() {
     }
     useEffect(
         () => {
+            yellowChangeHandle();
             window.addEventListener("scrollend", yellowChangeHandle);
             return () => {
                 window.removeEventListener("scrollend", yellowChangeHandle);
             }
         }, []);
-
-
-
-
 
     return (
         <Fragment>
@@ -74,13 +74,19 @@ function Home() {
                 element => <MessageContent buttonLink={element.buttonLink} content={element.content} />)}
             </div> */}
             </AllPage>
-            <SummaryWrap></SummaryWrap>
+            <SummaryWrap/>
+            <SummaryContent firstTitle={"LATEST WORK"} secondTitle={"It SES website"}  tech={"React Development"}
+            demonstration={"Across a 16-page project, I merged IT designs with 3D effects as per the client's vision. Using React, I coded the site meticulously. Emphasizing the client's values, it garnered highly positive feedback."}
+            projectImg={YouTouchIMG}/>
             <SummaryContent firstTitle={"LATEST WORK"} secondTitle={"Team App website"}  
             demonstration={"Full website design and build for a concept team collaboration platform. This website also includes a beautiful blog. I have built the website and the blog in Webflow which has one of the best CMS for blog hosting."}
             projectImg={TeamMockupIMG}/>
             <SummaryContent firstTitle={"LATEST WORK"} secondTitle={"Chat App website"}  
             demonstration={"This is a homepage design and build for a concept project – a chat application. I have designed the page firstthen later built a responsive page in Webflow."}
             projectImg={ChatAppIMG}/>
+            <WhatDo progress={progressNumber}/>
+
+
         </Fragment>
     );
 }
