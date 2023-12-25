@@ -43,8 +43,10 @@ function Home() {
         () => {
             yellowChangeHandle();
             window.addEventListener("scrollend", yellowChangeHandle);
+            window.addEventListener("touchend", scrollHandle);
             return () => {
                 window.removeEventListener("scrollend", yellowChangeHandle);
+                window.removeEventListener("touchend", yellowChangeHandle);
             }
         }, []);
 
