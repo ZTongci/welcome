@@ -55,9 +55,13 @@ export const  StyledBox = styled.div`
     width: 448px;
     text-align: left;
     @media (max-width: 1000px) {
-        width:350px;
+        width:300px;
     }
+    z-index:99;
+
   }
+
+
 
 
 
@@ -117,4 +121,31 @@ export const SubTitleAnimation1 = styled.div`
       top: 26px;
     }
     
+`
+export const Email = styled.span`
+letter-spacing:0.5px;
+position:absolute;
+font-size: 26px;
+z-index:-1;
+bottom:0.05px;
+
+
+/* font-weight: 600; */
+  &::after {
+    content: ''; /* 必须设置 content 属性才能显示伪元素 */
+    display: block; /* 将伪元素设置为块级元素，以便设置宽度和高度 */
+    position: absolute; /* 设置绝对定位 */
+    right: 0%; /* 位于链接元素的左边 */
+    bottom: 13px; /* 距离链接元素底部的距离，可以根据需要进行调整 */
+    width: 100%; /* 宽度与链接元素相同 */
+    height: 8px; /* 伪元素的高度，即显示的颜色条的高度 */
+    transition: height 0.3s ease; /* 添加过渡效果，使颜色条在变化时平滑移动 */
+    background-color: rgb(255, 232, 114); /* 伪元素的背景颜色 */
+    z-index:-2;
+}
+/* 鼠标悬停时改变伪元素的位置 */
+&:hover::after {
+    height: 20px;
+    z-index:-2;
+}
 `

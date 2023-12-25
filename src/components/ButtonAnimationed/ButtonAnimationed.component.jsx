@@ -1,14 +1,14 @@
 
-import { Fragment } from "react";
 import {ButtonStyled, ButtonBorder} from "./ButtonAnimationed.styled"
+import { Link } from "react-router-dom";
 
 
-const ButtonAnimationed = ({title})=>{
+const ButtonAnimationed = ({title, router})=>{
    return(
-   <Fragment>
+   <Link to={router ? `/projects/${router}` : "/products"}>
       <ButtonStyled >{title}</ButtonStyled>
       <ButtonBorder />
-   </Fragment>); 
+   </Link >); 
 }
 
 export default ButtonAnimationed;

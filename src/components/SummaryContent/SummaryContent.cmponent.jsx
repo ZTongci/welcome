@@ -4,9 +4,8 @@ import { Box, Group, LeftContent,RightContent,IcArrowForward,HintMessage,Overlap
     Group2,WebsiteDesignWrapper,Discribe,TextWrapper2,
     LatestWork } from "./SummaryContent.styles";
 import { Fragment, useState } from "react";
-import ChatAppIMG from "../../image/summary/chatapp.png";
 
-const SummaryContent = ({firstTitle,secondTitle,demonstration,projectImg, tech})=>{
+const SummaryContent = ({firstTitle,secondTitle,demonstration,projectImg, tech, router})=>{
   const [isHoverImage, setIsHoverImage] = useState(false);
   
 
@@ -24,7 +23,7 @@ const SummaryContent = ({firstTitle,secondTitle,demonstration,projectImg, tech})
           />
           </Fragment>
   }
-          <Overlap>
+          <Overlap to={`/projects/${router}`}>
             <DotPattern alt="Dot pattern" src="https://c.animaapp.com/Xz9tLC77/img/dot-pattern@2x.png" />
             <ChatApp onMouseOver={()=>setIsHoverImage(true)} onMouseOut={()=>setIsHoverImage(false)} alt="Chat app" src={projectImg} />
           </Overlap>
@@ -32,7 +31,7 @@ const SummaryContent = ({firstTitle,secondTitle,demonstration,projectImg, tech})
         <LeftContent>
         <ButtonNB>
           <OverlapGroup>
-            <ButtonAnimationed title={"see this project"} />
+            <ButtonAnimationed title={"see this project"} router={router}/>
           </OverlapGroup>
         </ButtonNB>
         <OverlapWrapper>

@@ -11,6 +11,7 @@ import Blog from "./route/Blog/Blog.component";
 import SplineBackround from "./components/Spline/Spline.component";
 import { Routes, Route} from "react-router-dom";
 import GiveMe from "./route/giveme/giveme.component";
+import Projects from "./route/Projects/Projects.component";
 
 
 
@@ -31,6 +32,10 @@ function App() {
         <Route path={`/`} element={<Navbar />}>
           <Route index element={<Home />} />
           <Route path={`/contact`} element={<Contact />} />
+          <Route path={`/projects`} element={<Projects/>} >
+              <Route path={`:project`} element={<Projects/>} />
+          </Route>
+          
           <Route path={`/aboutme`} element={<AboutMe />} />
           <Route path={`/products`} element={<Products />} />
           <Route path={`/messages`} element={<Message />} />

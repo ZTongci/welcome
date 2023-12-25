@@ -1,12 +1,11 @@
-import React, { Fragment } from "react";
-import MessageContent from "../../components/MessageContent/MessageContent.component"
+import { Fragment } from "react";
 import SummaryContent from "../../components/SummaryContent/SummaryContent.cmponent"
 import ButtonAnimationed from "../../components/ButtonAnimationed/ButtonAnimationed.component";
 import WhatDo from "../../components/WhatDo/WhatDo.component";
 import WantWork from "../../components/WantWork/WantWork.component"
 
 import ChatAppIMG from "../../image/summary/chatapp.png";
-import TeamMockupIMG from "../../image/summary/TeamMockup.jpg";
+import TeamMockupIMG from "../../image/summary/TeamMockup.png";
 import YouTouchIMG from "../../image/summary/youtouchHome.png";
 
 import MessageCotents from "./MessageContents.json"
@@ -70,21 +69,18 @@ function Home() {
                     </Zoom>
                     <ButtonAnimationed title={"see my work"}/>
                 </HeroSection>
-                {/* <div>
-            {messageJson.map(
-                element => <MessageContent buttonLink={element.buttonLink} content={element.content} />)}
-            </div> */}
+
             </AllPage>
             <SummaryWrap/>
             <SummaryContent firstTitle={"LATEST WORK"} secondTitle={"It SES website"}  tech={"React Development"}
             demonstration={"Across a 16-page project, I merged IT designs with 3D effects as per the client's vision. Using React, I coded the site meticulously. Emphasizing the client's values, it garnered highly positive feedback."}
-            projectImg={YouTouchIMG}/>
+            projectImg={YouTouchIMG} router={"it-ses"}/>
             <SummaryContent firstTitle={"LATEST WORK"} secondTitle={"Team App website"}  
             demonstration={"Full website design and build for a concept team collaboration platform. This website also includes a beautiful blog. I have built the website and the blog in Webflow which has one of the best CMS for blog hosting."}
-            projectImg={TeamMockupIMG}/>
+            projectImg={TeamMockupIMG} router={"team-app"}/>
             <SummaryContent firstTitle={"LATEST WORK"} secondTitle={"Chat App website"}  
             demonstration={"This is a homepage design and build for a concept project – a chat application. I have designed the page firstthen later built a responsive page in Webflow."}
-            projectImg={ChatAppIMG}/>
+            projectImg={ChatAppIMG} router={"chat-app"}/>
             <WhatDo progress={progressNumber}/>
             <WorkWrap /> 
             <WantWork progress={progressNumber}/>

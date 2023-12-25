@@ -43,39 +43,8 @@ const ProductsResourse = [
 
 ]
 
-// ProductsResourse.sort((first, second) => first.type - second.type);
-
 function Products() {
-    // const [Productslist, setProductslist] = useState(ProductsResourse);
 
-    // function reportWindowSize() {
-    //     if (window.innerWidth <= 1350) {
-    //         const resizeList = ProductsResourse.sort((first, second) => first.type - second.type
-    //         )
-    //         setProductslist(resizeList);
-    //     }
-    //     else {
-    //         setProductslist(ProductsResourseInit);
-    //     }
-    // };
-
-    // // 防抖函数
-    // function debounce(fn, wait) {
-    //     var timeout = null;
-    //     return function () {
-    //         if (timeout !== null)
-    //             clearTimeout(timeout);
-    //     }
-    // }
-
-
-    // useEffect(() => {
-        
-    //     window.addEventListener('resize', debounce(reportWindowSize,1));
-
-        
-    //     return () => window.removeEventListener('resize', debounce(reportWindowSize,1));
-    // });
 
     return (
         <Fragment>

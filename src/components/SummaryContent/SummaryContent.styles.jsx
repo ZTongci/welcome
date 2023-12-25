@@ -1,4 +1,6 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
+
 
 
 export const Box = styled.div`
@@ -68,7 +70,7 @@ export const HintMessage = styled.p`
     transition: all 1s;
 `
 
-export const Overlap = styled.div`
+export const Overlap = styled(Link)`
     height: 467px;
     left: 576px;
     position: absolute;

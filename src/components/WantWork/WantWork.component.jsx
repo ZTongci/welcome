@@ -1,5 +1,5 @@
 import React from "react";
-import { StyledBox,SubTitleAnimation1 } from "./WantWork.styled";
+import { StyledBox,SubTitleAnimation1,Email } from "./WantWork.styled";
 
 
 const WantWork = ({progress}) => {
@@ -10,8 +10,9 @@ const WantWork = ({progress}) => {
             <div className="text-wrapper-2">Want to work?</div>
             <div className="group">
                 <p className="p">
-                    I design beautiful and powerful websites for modern businesses. Any business today needs a website that wins
-                    customers’ trust and helps you do your business well. I make sure your website is up to that standard.
+                If you need a modern and powerful website for your business, startup or yourself, I am available for work. You can email me directly at &nbsp; 
+                 <Email>ztongci@email.com</Email>
+                
                 </p>
             </div>
             
