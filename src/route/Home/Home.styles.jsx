@@ -186,7 +186,7 @@ export const SummaryWrap = styled.div`
       margin-bottom: 5%;
     }
     @media (max-width: 500px) {
-      height: 700vh;
+      height: 600vh;
       /* margin-bottom: 5%; */
     }
 `
