@@ -3,10 +3,9 @@ import { StyledBox,SubTitleAnimation1 } from "./WhatDo.styled";
 
 
 const WhatDo = ({progress}) => {
-    console.log(progress);
     return (
         <StyledBox>
-            <SubTitleAnimation1 progress={`${progress-45}px`}/>
+            <SubTitleAnimation1 progress={`${progress}`}/>
             
             <div className="text-wrapper-2">What I do</div>
             <div className="group">

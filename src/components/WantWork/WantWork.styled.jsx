@@ -1,8 +1,9 @@
 import styled from "styled-components";
 
 export const  StyledBox = styled.div`
-  height: 475px;
+  height: 10px;
   position: relative;
+  bottom:40vh;
   width: 1280px;
   display:flex;
   justify-content:space-between;
@@ -11,7 +12,13 @@ export const  StyledBox = styled.div`
       }
     @media (max-width: 1000px) {
         width:350px;
-        margin-bottom: 500px;
+        bottom:80vh;
+        /* margin-bottom: 500px; */
+    }
+    @media (max-width: 500px) {
+        width:350px;
+        margin-bottom: 0px;
+        bottom:80vh;
     }
 
   & .group {
@@ -33,31 +40,7 @@ export const  StyledBox = styled.div`
     }
   }
 
-  & .text-wrapper {
-    color: var(--text-color);
-    font-family: var(--paragraph-font-family);
-    font-size: 24px;
-    font-style: var(--paragraph-font-style);
-    font-weight: var(--paragraph-font-weight);
-    letter-spacing: var(--paragraph-letter-spacing);
-    line-height: var(--paragraph-line-height);
-    position: relative;
-    width: 448px;
-    text-align: left;
-    @media (max-width: 1000px) {
-        width:350px;
-    }
-  }
 
-  & .div {
-    color: var(--text-color);
-    font-family: "Muli-Bold", Helvetica;
-    font-size: 26px;
-    font-weight: 700;
-    letter-spacing: 0;
-    line-height: normal;
-    position: relative;
-  }
 
   & .p {
     color: var(--text-color);
@@ -68,6 +51,7 @@ export const  StyledBox = styled.div`
     letter-spacing: var(--paragraph-letter-spacing);
     line-height: var(--paragraph-line-height);
     position: relative;
+    bottom:40px;
     width: 448px;
     text-align: left;
     @media (max-width: 1000px) {
@@ -75,25 +59,7 @@ export const  StyledBox = styled.div`
     }
   }
 
-  & .design {
-    color: var(--text-color);
-    font-family: "Muli-Bold", Helvetica;
-    font-size: 26px;
-    font-weight: 700;
-    letter-spacing: 0;
-    line-height: normal;
-    position: relative;
-  }
 
-
-  & .rectangle {
-    background-color: var(--highlight);
-    height: 28px;
-    left: 156px;
-    position: absolute;
-    top: 39px;
-    width: 100px;
-  }
 
   & .text-wrapper-2 {
     color: var(--text-color);
@@ -103,14 +69,16 @@ export const  StyledBox = styled.div`
     font-weight: var(--h1-font-weight);
     left: 0px;
     letter-spacing: var(--h1-letter-spacing);
-    line-height: var(--h1-line-height);
+    line-height: 0.8;
     position: relative;
     top: -50px;
     /* margin-bottom: 500px; */
     text-align:left;
-    width:450px;
+    width:500px;
     @media (max-width: 1316px) {
-        width:900px;
+        font-size: 550%;
+        width:1000px;
+        font-weight: 500;
       }
     @media (max-width: 1000px) {
         font-size: 350%;
@@ -126,25 +94,27 @@ export const SubTitleAnimation1 = styled.div`
     background-color: #ffe872;
     margin-right: 4px;
     position: absolute;
-    top: 36px;
+    top: -5px;
     left: 16.2%;
     right: 0%;
     width:0;
-    ${(({progress})=>`width:calc(${progress}px /1.3);`)}
+    ${(({progress})=>`width:${progress}px;`)}
     @media (max-width: 1310px) {
-      left: 208px;
-      top:36px;
+      left: 0px;
+      top:80px;
+      ${(({progress})=>`width:calc(${progress}px / 1.5);`)}
       }
     @media (max-width: 1000px) {
       left: 120px;
-      top:42px;
-      ${(({progress})=>`width:calc(${progress}px /2.2);`)}
+      top:20px;
+      width:86px;
+      ${(({progress})=>`width:calc(${progress}px / 1.7);`)}
       }
       @media (max-width: 500px) {
       height: 12px;
-      ${(({progress})=>`width:calc(${progress}px /2.2);`)}
+      ${(({progress})=>`width:calc(${progress}px / 1.7);`)}
       left: 120px;
-      top: 50px;
+      top: 26px;
     }
     
 `

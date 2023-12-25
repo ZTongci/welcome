@@ -71,11 +71,11 @@ export const SubTitleAnimation1 = styled.div`
     top: 20px;
     left: 4%;
     right: 0%;
-    width:0;
-    ${(({progress})=>`width:${progress};`)}
+    width:0px;
+    ${(({progress})=>`width:${progress}px;`)}
     @media (max-width: 500px) {
       height: 10px;
-      width:86px;
+      ${(({progress})=>`width:calc(${progress}px / 2.1);`)}
       left: -2px;
       top: 10px;
     }
@@ -91,18 +91,18 @@ export const SubTitleAnimation2 = styled.div`
     left: 500px;
     right: 0%;
     width:0;
-
+    ${(({progress})=>`width:${progress}px;`)}
     @media (max-width: 1000px) {
       left: 90px;
       top:80px;
       }
       @media (max-width: 500px) {
       height: 10px;
-      width:86px;
+      ${(({progress})=>`width:calc(${progress}px / 2);`)}
       left: 240px;
       top: 10px;
     }
-      ${(({progress})=>`width:${progress};`)}
+      
 `
 
 
@@ -176,13 +176,35 @@ export const ScrollArrow = styled.div`
 
 export const SummaryWrap = styled.div`
     right:0px;
-    height: 400vh;
+    height: 300vh;
     width: 100%;
     position:absolute;
     top:110vh;
     background-color: #fff;
     @media (max-width: 1000px) {
-      height: 380vh;
+      height: 450vh;
       margin-bottom: 5%;
     }
+    @media (max-width: 500px) {
+      height: 800vh;
+      /* margin-bottom: 5%; */
+    }
+`
+export const WorkWrap = styled.div`
+    height: 50vh;
+    position:relative;
+    background-color: #f9efe7;
+    width: 98%;
+    left:0%;
+    @media (max-width: 1000px) {
+      height: 50vh;
+      bottom:40vh;
+      z-index:0;
+    }
+    @media (max-width: 500px) {
+      height: 60vh;
+      bottom:30vh;
+      z-index:0;
+    }
+
 `
