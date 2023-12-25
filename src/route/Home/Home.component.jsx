@@ -37,13 +37,13 @@ function Home() {
             if (currNum === targetNum + 1) {
                 clearInterval(interval);
             }
-        }, 1);
+        }, 2);
     }
     useEffect(
         () => {
             yellowChangeHandle();
             window.addEventListener("scrollend", yellowChangeHandle);
-            window.addEventListener("touchend", scrollHandle);
+            window.addEventListener("touchend", yellowChangeHandle);
             return () => {
                 window.removeEventListener("scrollend", yellowChangeHandle);
                 window.removeEventListener("touchend", yellowChangeHandle);
