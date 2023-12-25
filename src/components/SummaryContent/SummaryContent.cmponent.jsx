@@ -1,7 +1,7 @@
 import ButtonAnimationed from "../ButtonAnimationed/ButtonAnimationed.component";
 import { Box, Group, LeftContent,RightContent,IcArrowForward,HintMessage,Overlap, DotPattern,ChatApp,ButtonNB,OverlapGroup, TextWrapper,OverlapWrapper
     ,ConceptWrapper, ConceptDiv, OverlapGroupWrapper,WebflowDevelopmentWrappe,
-    Group2,WebsiteDesignWrapper,Discribe,TextWrapper2,
+    Group2,WebsiteDesignWrapper,Discribe,TextWrapper2,Lable,
     LatestWork } from "./SummaryContent.styles";
 import { Fragment, useState } from "react";
 
@@ -34,21 +34,23 @@ const SummaryContent = ({firstTitle,secondTitle,demonstration,projectImg, tech, 
             <ButtonAnimationed title={"see this project"} router={router}/>
           </OverlapGroup>
         </ButtonNB>
-        <OverlapWrapper>
-          <ConceptWrapper>
-            <ConceptDiv>Concept</ConceptDiv>
-          </ConceptWrapper>
-        </OverlapWrapper>
-        <OverlapGroupWrapper >
-          <WebflowDevelopmentWrappe>
-            <ConceptDiv>{tech ? tech : "Webflow Development"}</ConceptDiv>
-          </WebflowDevelopmentWrappe>
-        </OverlapGroupWrapper >
-        <Group2>
-          <WebsiteDesignWrapper>
-            <ConceptDiv>Website Design</ConceptDiv>
-          </WebsiteDesignWrapper>
-        </Group2>
+        <Lable>
+          <OverlapWrapper>
+            <ConceptWrapper>
+              <ConceptDiv>Concept</ConceptDiv>
+            </ConceptWrapper>
+          </OverlapWrapper>
+          <OverlapGroupWrapper >
+            <WebflowDevelopmentWrappe>
+              <ConceptDiv>{tech ? tech : "Webflow Development"}</ConceptDiv>
+            </WebflowDevelopmentWrappe>
+          </OverlapGroupWrapper >
+          <Group2>
+            <WebsiteDesignWrapper>
+              <ConceptDiv>Website Design</ConceptDiv>
+            </WebsiteDesignWrapper>
+          </Group2>
+        </Lable>
         <Discribe>{demonstration}</Discribe>
         <TextWrapper2>{secondTitle}</TextWrapper2>
         <LatestWork>{firstTitle}</LatestWork>

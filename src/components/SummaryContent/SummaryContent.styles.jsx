@@ -204,7 +204,7 @@ export const Discribe = styled.p`
     text-align:left;
     @media (max-width: 1000px) {
         font-size: 24px;
-        width:400px;
+        width:350px;
         margin-top: 350px;
     }
 `
@@ -243,4 +243,12 @@ export const LatestWork = styled.div`
     position: absolute;
     left:0px;
     white-space: nowrap;
+`  
+
+export const Lable = styled.div`
+    @media (max-width: 1000px) {
+        width:350px;
+        position:absolute;
+        right:6px;
+    }
 `  
