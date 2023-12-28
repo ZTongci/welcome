@@ -12,7 +12,7 @@ const WantWork = ({ progress }) => {
                 <div className="group">
                     <p className="p">
                         If you need a modern and powerful website for your business, startup or yourself, I am available for work. You can email me directly at &nbsp;
-                        <Email>ztongci@email.com</Email>
+                        <Email>ztongci@gmail.com</Email>
 
                     </p>
                 </div>
